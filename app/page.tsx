@@ -1,3 +1,4 @@
+import Empowering from './components/empowering/Empowering';
 import './components/style/home.css'
 
 export default function Home() {
@@ -69,9 +70,10 @@ export default function Home() {
 
 
        
-        
 
         </div>
+        <Empowering/>
+
     </>
   );
 }
