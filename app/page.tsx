@@ -1,3 +1,4 @@
+import Companies from './components/Home/CompaniesSection';
 import EmpoweringSection from './components/Home/EmpoweringSection';
 import ExploreSection from './components/Home/ExploreSection';
 import InquirySection from './components/Home/InquirySection';
@@ -13,8 +14,8 @@ export default function Home() {
       <EmpoweringSection /> */}
       <Services />
       <SuccessStories />
+      <Companies />
       <Partners />
-
       <InquirySection />
       <Partners />
     </>
