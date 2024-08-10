@@ -17,6 +17,7 @@ const config: Config = {
     colors: {
       ...colors,
       lightblue: '#03979C2B',
+      sctblue: '#03979C',
       sctyellow: '#fbbf31',
       secondary: '#757575',
     },
