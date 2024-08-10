@@ -3,6 +3,7 @@ import ExploreSection from './components/Home/ExploreSection';
 import InquirySection from './components/Home/InquirySection';
 import Partners from './components/Home/PartnersSection';
 import Services from './components/Home/ServicesSection';
+import SuccessStories from './components/Home/SuccessStoriesSection';
 import TitleSection from './components/Home/TitleSection';
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <ExploreSection />
       <EmpoweringSection /> */}
       <Services />
+      <SuccessStories />
       <Partners />
 
       <InquirySection />
