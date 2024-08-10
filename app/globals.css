@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.svg-container {
+  height: 65px; /* Desired reduced height */
+  overflow: hidden;
+  width: 235px; /* Match SVG width */
+}
