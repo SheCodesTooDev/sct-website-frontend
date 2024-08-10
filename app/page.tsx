@@ -6,9 +6,9 @@ import TitleSection from './components/Home/TitleSection';
 export default function Home() {
   return (
     <>
-      <TitleSection />
+      {/* <TitleSection />
       <ExploreSection />
-      <EmpoweringSection />
+      <EmpoweringSection /> */}
       <InquirySection />
       <Partners />
     </>
