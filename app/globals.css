@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
 .svg-container {
   height: 65px; /* Desired reduced height */
   overflow: hidden;
