@@ -1,3 +1,4 @@
+import Blogs from './components/Home/NewsSection';
 import Companies from './components/Home/CompaniesSection';
 import EmpoweringSection from './components/Home/EmpoweringSection';
 import ExploreSection from './components/Home/ExploreSection';
@@ -15,7 +16,7 @@ export default function Home() {
       <Services />
       <SuccessStories />
       <Companies />
-      <Partners />
+      <Blogs />
       <InquirySection />
       <Partners />
     </>
