@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-
+import colors from 'tailwindcss/colors';
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,8 +15,11 @@ const config: Config = {
       },
     },
     colors: {
+      ...colors,
       lightblue: '#03979C2B',
+      sctblue: '#03979C',
       sctyellow: '#fbbf31',
+      secondary: '#757575',
     },
   },
   plugins: [],
