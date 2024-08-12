@@ -16,3 +16,11 @@
 .success-img {
   border-radius: 500px 0px 500px 500px;
 }
+
+.nav-links :hover {
+  color: #03979c;
+}
+
+.nav-active-elem {
+  color: #03979c;
+}
