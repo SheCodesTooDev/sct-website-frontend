@@ -5,11 +5,34 @@ import { partners } from '@/app/data/partners';
 import { getSCTStories } from '@/app/services/api';
 import { useEffect } from 'react';
 import HomeStoryCard from '../common/cards/HomeStoryCard';
-getSCTStories;
+import { log } from 'console';
 const SuccessStories = () => {
-  // useEffect(() => {
-  //   getSCTStories();
-  // }, []);
+  function reshapeData(data: any) {
+    return data.map((story: any) => {
+      return {
+        id: story.id,
+        title: story.title,
+        author: story.auther,
+        published_date: story.published_date,
+        slug: story.slug,
+        photo: story.photo,
+        content: story.content.map((section: any) => {
+          return {
+            type: section.type,
+            level: section.level || null,
+            text: section.children.map((child: any) => child.text).join(' '),
+          };
+        }),
+      };
+    });
+  }
+
+  const data = async () => {
+    const data = await getSCTStories();
+    return;
+  };
+  console.log(data);
+
   return (
     <div className=' flex flex-col w-full justify-center items-center py-20 px-5 text-center'>
       <p className='font-medium text-3xl leading-loose'>Success Stories</p>
