@@ -6,7 +6,7 @@ const Partners = () => (
     <p className='font-medium text-3xl leading-loose'>Our Partners</p>
 
     <Blueline />
-    <p className='font-medium text-lg md:text-sm leading-loose text-secondary w-60 sm:w-72 md:w-full'>
+    <p className='font-thin text-lg md:text-sm leading-loose text-secondary w-60 sm:w-72 md:w-full'>
       Collaborating for Success: Our Trusted Partnerships Drive Innovation and
       Empowerment.
     </p>

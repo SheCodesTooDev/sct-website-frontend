@@ -7,7 +7,7 @@ const TitleSection = () => {
         Inspiring Women To code
       </p>
       <YellowLine />
-      <p className='font-medium text-2xl md:text-sm leading-loose '>
+      <p className='font-medium text-2xl md:text-lg leading-loose '>
         Explore the programming areas of interest you desire.
       </p>
     </div>

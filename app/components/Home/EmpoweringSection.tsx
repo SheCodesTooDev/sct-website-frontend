@@ -29,7 +29,7 @@ const EmpoweringSection = () => {
         </svg>
       </div>
 
-      <p className='text-xs sm:text-sm text-center mt-0 -mb-10'>
+      <p className='text-sm sm:text-lg font-thin text-center mt-0 -mb-10'>
         We are an educational organisation based in Iraq dedicated to empowering
         young Iraqi women in the tech industry
         <br />
