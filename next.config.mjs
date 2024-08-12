@@ -3,6 +3,9 @@ const nextConfig = {
   env: {
     API_URL: process.env.API_URL,
   },
+  images: {
+    domains: [process.env.DOMAIN],
+  },
 };
 
 export default nextConfig;
