@@ -1,12 +1,6 @@
 import Image from 'next/image';
+import { NewsProps } from '@/app/types/newsTypes';
 
-interface NewsProps {
-  id: number;
-  image: any;
-  title: string;
-  date: string;
-  description?: string;
-}
 const BigNewsCard: React.FC<NewsProps> = ({ image, title, date }) => {
   return (
     <div className='flex flex-col items-start px-0 md:px-10 xl:px-0 justify-center text-start mb-5'>
