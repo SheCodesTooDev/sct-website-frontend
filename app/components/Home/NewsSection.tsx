@@ -24,7 +24,7 @@ const News = () => (
         />
       </section>
       <section>
-        {news.map((news) => (
+        {news.slice(0, 3).map((news) => (
           <NewsHomeCard key={news.id} {...news} />
         ))}
       </section>
