@@ -8,7 +8,7 @@ const NewsHero = () => {
       </p>
 
       <YellowLine />
-      <p className='font-medium text-lg md:text-sm mb-16  leading-loose text-secondary w-60 sm:w-72 md:w-full'>
+      <p className='font-medium text-lg md:text-md mb-16  leading-loose text-secondary w-60 sm:w-72 md:w-full'>
         Stay up-to-date with the latest developments in the world of technology
         and coding.
       </p>
