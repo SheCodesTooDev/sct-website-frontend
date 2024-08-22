@@ -1,4 +1,4 @@
-import Student from '../../public/images/8 .jpeg';
+import Student from '../../public/images/5.jpg';
 
 export const news = [
   {

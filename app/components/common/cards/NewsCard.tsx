@@ -18,7 +18,7 @@ const NewsCard: React.FC<NewsProps> = ({ image, title, date }) => {
         <div className='flex flex-col justify-start items-start'>
           <p className='font-medium text-lg lg:text-xl mt-2 my-3'>{title}</p>
           <Link
-            href={`/news`}
+            href={`/news/test`}
             className='text-sctblue text-sm  underline flex justify-end'
           >
             Read more -&gt;
