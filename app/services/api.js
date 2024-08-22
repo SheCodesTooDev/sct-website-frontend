@@ -1,9 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
 const API_URL = process.env.API_URL;
-
+const TEST_API = process.env.TEST_API;
 export const getSCTStories = async () => {
-  console.log(API_URL);
   try {
     const response = await axios.get(`${API_URL}/api/stories?populate=*`);
     return response.data.data.map((story) => ({
@@ -14,7 +13,7 @@ export const getSCTStories = async () => {
         : null,
     }));
   } catch (error) {
-    console.error('Error fetching stories:', error);
+    console.error("Error fetching stories:", error);
     return [];
   }
 };
@@ -37,7 +36,24 @@ export const getSCTStory = async (slug) => {
       return null;
     }
   } catch (error) {
-    console.error('Error fetching story:', error);
+    console.error("Error fetching story:", error);
     return null;
   }
+};
+
+export const getSCTArticles = async () => {
+  // try {
+  const response = await axios.get(`${TEST_API}/api/articles?populate=*`);
+  return response.data.data;
+  //.map((article) => ({
+  //     id: article.id,
+  //     ...article.attributes,
+  //     image: article.attributes.image
+  //       ? `${TEST_API}${story.attributes.image.data.attributes.url}`
+  //       : null,
+  //   }));
+  // } catch (error) {
+  //   console.error("Error fetching stories:", error);
+  //   return [];
+  // }
 };
