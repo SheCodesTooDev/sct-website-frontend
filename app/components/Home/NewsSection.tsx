@@ -1,9 +1,10 @@
 import Blueline from '../common/BlueLine';
 import { news } from '@/app/data/news';
-import NewsCard from '../common/cards/NewsCard';
+import NewsHomeCard from '../common/cards/NewsHomeCard';
 import BigNewsCard from '../common/cards/BigNewsCard';
 import Student from '@/public/images/8 .jpeg';
 import Button from '../common/Button';
+import Link from 'next/link';
 
 const News = () => (
   <div className='flex flex-col w-full justify-center items-center py-20 px-10 xl:px-32 text-center'>
@@ -23,13 +24,15 @@ const News = () => (
         />
       </section>
       <section>
-        {news.map((news) => (
-          <NewsCard key={news.id} {...news} />
+        {news.slice(0, 3).map((news) => (
+          <NewsHomeCard key={news.id} {...news} />
         ))}
       </section>
     </div>
     <div className='flex justify-center mt-5'>
-      <Button color='bg-sctblue text-white'>More news</Button>
+      <Link href='news'>
+        <Button color='bg-sctblue text-white'>More news</Button>
+      </Link>
     </div>
   </div>
 );
