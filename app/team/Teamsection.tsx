@@ -9,6 +9,8 @@ import jafar from '../assets/illustrations/jaafar.svg'
 import athraa from '../assets/illustrations/athraa.svg'
 import LinkedinIcon from "../components/common/LinkedinIcon";
 import GmailIcon from "../components/common/gmail";
+import arrow2 from '../assets/illustrations/arrow2.svg'
+import arrow3 from '../assets/illustrations/arrow3.svg'
 
 export default function Teamsection() {
   return (
@@ -57,11 +59,10 @@ export default function Teamsection() {
   </div>
 
 </div>
+<Image src={arrow2} alt='arrow' className='relative left-20 bottom-8 ' style={{zIndex:'-5'}}/>
 
 
-
-<div className='flex justify-center items-center gap-5 mt-14'>
-
+<div className='flex justify-center items-center gap-7 mb-40'>
 <div className='text-center w-60  border-2 border-solid border-gray-300 rounded-lg'>
 <Image src={moh} alt='' className='ml-auto mr-auto h-auto w-40'/>
 <p className=' font-bold text-lg'>
