@@ -26,7 +26,7 @@ const SuccessStories = async () => {
       </p>
 
       <div className='xl:mx-16'>
-        <HomeStoryCard slug={story.slug} />
+        <HomeStoryCard slug={story?.slug} />
       </div>
     </div>
   );
