@@ -1,23 +1,24 @@
 import React from 'react';
 import Image from 'next/image';
-import { getSCTStory } from '../../services/api';
+import { getArticle } from '../../services/api';
 import { news } from '@/app/data/news';
 import NewsCard from '@/app/components/common/cards/NewsCard';
 import Link from 'next/link';
 import Button from '@/app/components/common/Button';
 
-const SingleNewsPage = async () => {
-  const story = await getSCTStory('nada-story');
+const SingleNewsPage = async ({ params }: any) => {
+  const { slug } = params;
 
-  if (!story) {
-    return <div>Story not found.</div>;
+  const article = await getArticle(slug);
+
+  if (!article) {
+    return <div>Article not found.</div>;
   }
   return (
     <div className='flex flex-col w-full justify-center items-center py-10 md:py-20 px-6 sm:px-10 xl:px-32 '>
       <div>
         <p className='text-3xl font-semibold text-gray-800 mt-5'>
-          Mastering Responsive Design: Tips for Creating Mobile-Friendly
-          Websites
+          {article.title}
         </p>
         <p className='mt-8'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
@@ -30,17 +31,17 @@ const SingleNewsPage = async () => {
         </p>
       </div>
       <div className='my-10'>
-        {story.photo && (
+        {article.photo && (
           <div className='relative w-full h-96 '>
             <Image
               className='rounded-xl w-full h-fulls object-fit'
-              src={story.photo}
+              src={article.photo}
               layout='fill'
               alt='illustration'
             />
           </div>
         )}
-        {story.content.map((block: any, index: number) => (
+        {article.description.map((block: any, index: number) => (
           <div className='text-pretty' key={index}>
             {block.type === 'paragraph' &&
               block.children.map((child: any, idx: any) =>
