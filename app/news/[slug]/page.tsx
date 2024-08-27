@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { getArticle } from '../../services/api';
+import { getArticle, getArticles } from '../../services/api';
 import { news } from '@/app/data/news';
 import NewsCard from '@/app/components/common/cards/NewsCard';
 import Link from 'next/link';
@@ -10,12 +10,13 @@ const SingleNewsPage = async ({ params }: any) => {
   const { slug } = params;
 
   const article = await getArticle(slug);
+  const articles = await getArticles();
 
-  if (!article) {
+  if (!article && !articles) {
     return <div>Article not found.</div>;
   }
   return (
-    <div className='flex flex-col w-full justify-center items-center py-10 md:py-20 px-6 sm:px-10 xl:px-32 '>
+    <div className='flex flex-col w-full justify-center items-center py-10 md:py-20 px-6 sm:px-10 xl:px-64 '>
       <div>
         <p className='text-3xl font-semibold text-gray-800 mt-5'>
           {article.title}
@@ -27,14 +28,14 @@ const SingleNewsPage = async ({ params }: any) => {
           reprehenderit provident?
         </p>
         <p className=' mt-2 font-medium text-sm  text-secondary'>
-          📅 24/12/2024
+          📅 {article.date}
         </p>
       </div>
       <div className='my-10'>
         {article.photo && (
           <div className='relative w-full h-96 '>
             <Image
-              className='rounded-xl w-full h-fulls object-fit'
+              className='rounded-xl w-full h-fulls object-conatin'
               src={article.photo}
               layout='fill'
               alt='illustration'
@@ -42,11 +43,13 @@ const SingleNewsPage = async ({ params }: any) => {
           </div>
         )}
         {article.description.map((block: any, index: number) => (
-          <div className='text-pretty' key={index}>
+          <div className='text-pretty mt-10' key={index}>
             {block.type === 'paragraph' &&
               block.children.map((child: any, idx: any) =>
                 child.type === 'text' ? (
-                  <p key={idx}>{child.text}</p>
+                  <p className='text-lg mb-16' key={idx}>
+                    {child.text}
+                  </p>
                 ) : child.type === 'link' ? (
                   <a key={idx} href={child.url}>
                     {child.text}
@@ -80,8 +83,8 @@ const SingleNewsPage = async ({ params }: any) => {
         </Link>
       </div>
       <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-5 gap-y-12'>
-        {news.slice(0, 3).map((news) => (
-          <NewsCard key={news.id} {...news} />
+        {articles.slice(0, 3).map((article: any) => (
+          <NewsCard key={article.id} {...article} />
         ))}
       </section>
       <Link className='mt-10 block sm:hidden' href='/news'>

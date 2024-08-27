@@ -61,7 +61,7 @@ export const getArticles = async () => {
 export const getArticle = async (slug) => {
   try {
     const response = await axios.get(
-      `${API_URL}/api/article?filters[slug][$eq]=${slug}&populate=*`
+      `${API_URL}/api/articles?filters[slug][$eq]=${slug}&populate=*`
     );
     const article = response.data.data[0];
     if (article) {
