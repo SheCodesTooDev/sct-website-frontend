@@ -18,16 +18,16 @@ const SingleNewsPage = async ({ params }: any) => {
   return (
     <div className='flex flex-col w-full justify-center items-center py-10 md:py-20 px-6 sm:px-10 xl:px-64 '>
       <div>
-        <p className='text-3xl font-semibold text-gray-800 mt-5'>
+        <p className='text-3xl w-full font-semibold text-gray-800 mt-5'>
           {article.title}
         </p>
-        <p className='mt-8'>
+        <p className='mt-8 text-lg'>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
           reprehenderit provident?sit amet consectetur, adipisicing elit. Sed
           reprehenderit provident?sit amet consectetur, adipisicing elit. Sed
           reprehenderit provident?
         </p>
-        <p className=' mt-2 font-medium text-sm  text-secondary'>
+        <p className='mt-3 font-medium text-base  text-secondary'>
           📅 {article.date}
         </p>
       </div>
@@ -35,7 +35,7 @@ const SingleNewsPage = async ({ params }: any) => {
         {article.photo && (
           <div className='relative w-full h-96 '>
             <Image
-              className='rounded-xl w-full h-fulls object-conatin'
+              className='rounded-xl w-full h-fulls object-cover'
               src={article.photo}
               layout='fill'
               alt='illustration'
@@ -73,7 +73,7 @@ const SingleNewsPage = async ({ params }: any) => {
           </div>
         ))}
       </div>
-      <div className='flex justify-between w-full mx-20  mt-12 lg:mt-20 mb-10'>
+      <div className='flex justify-between w-full mx-20 sm:mt-12 lg:mt-20 mb-10'>
         <p className='text-xl font-bold'> You might also Like ..</p>
         <Link
           className='text-sctblue text-lg hidden sm:flex  underline justify-end'
