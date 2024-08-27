@@ -10,7 +10,7 @@ const NewsPage = async () => {
     return <div>Error loading articles.</div>;
   }
   return (
-    <div className='flex flex-col w-full justify-center items-center py-20 px-10 xl:px-32 text-center'>
+    <div className='sct-bg flex flex-col w-full justify-center items-center py-20 px-10 xl:px-32 text-center'>
       <NewsHero />
       <NewsList articles={articles} />
     </div>

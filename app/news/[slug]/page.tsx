@@ -5,6 +5,8 @@ import { news } from '@/app/data/news';
 import NewsCard from '@/app/components/common/cards/NewsCard';
 import Link from 'next/link';
 import Button from '@/app/components/common/Button';
+import FacebookSvg from '@/app/assets/logos/facebook.svg';
+import InstagramSvg from '@/app/assets/logos/instagram.svg';
 
 const SingleNewsPage = async ({ params }: any) => {
   const { slug } = params;
@@ -16,8 +18,8 @@ const SingleNewsPage = async ({ params }: any) => {
     return <div>Article not found.</div>;
   }
   return (
-    <div className='flex flex-col w-full justify-center items-center py-10 md:py-20 px-6 sm:px-10 xl:px-64 '>
-      <div>
+    <div className='sct-bg flex flex-col w-full justify-center items-center py-10 md:py-20 '>
+      <div className='px-6 sm:px-10 xl:px-64'>
         <p className='text-3xl w-full font-semibold text-gray-800 mt-5'>
           {article.title}
         </p>
@@ -33,17 +35,42 @@ const SingleNewsPage = async ({ params }: any) => {
       </div>
       <div className='my-10'>
         {article.photo && (
-          <div className='relative w-full h-96 '>
-            <Image
-              className='rounded-xl w-full h-fulls object-cover'
-              src={article.photo}
-              layout='fill'
-              alt='illustration'
-            />
+          <div className='xl:grid xl:grid-cols-12 px-6 sm:px-10 xl:px-40'>
+            <div className='hidden xl:block col-span-1 h-full'>
+              <Link href='https://www.facebook.com/she.codes.too.iq/'>
+                <Image
+                  className='  w-8 h-8 md:w-8 md:h-auto m-10'
+                  src={FacebookSvg}
+                  alt="'logo"
+                />
+              </Link>
+              <Link href='https://www.instagram.com/she.codes.too.iq/'>
+                <Image
+                  className=' w-8 h-8 md:w-8 md:h-auto m-10'
+                  src={InstagramSvg}
+                  alt="'logo"
+                />
+              </Link>
+              <Link href='https://www.linkedin.com/school/shecodestooiq/'>
+                <Image
+                  className=' w-8 h-8 md:w-8 md:h-auto m-10'
+                  src={FacebookSvg}
+                  alt="'logo"
+                />
+              </Link>
+            </div>
+            <div className='lg:col-span-10 relative w-full h-96 '>
+              <Image
+                className='rounded-xl w-full h-fulls object-cover'
+                src={article.photo}
+                layout='fill'
+                alt='illustration'
+              />
+            </div>
           </div>
         )}
         {article.description.map((block: any, index: number) => (
-          <div className='text-pretty mt-10' key={index}>
+          <div className='text-pretty mt-10 px-6 sm:px-10 xl:px-64' key={index}>
             {block.type === 'paragraph' &&
               block.children.map((child: any, idx: any) =>
                 child.type === 'text' ? (
@@ -73,25 +100,27 @@ const SingleNewsPage = async ({ params }: any) => {
           </div>
         ))}
       </div>
-      <div className='flex justify-between w-full mx-20 sm:mt-12 lg:mt-20 mb-10'>
-        <p className='text-xl font-bold'> You might also Like ..</p>
-        <Link
-          className='text-sctblue text-lg hidden sm:flex  underline justify-end'
-          href='/news'
-        >
-          More
+      <div className='px-6 sm:px-10 xl:px-64'>
+        <div className='flex justify-between w-full  sm:mt-12 lg:mt-20 mb-10'>
+          <p className='text-xl font-bold'> You might also Like ..</p>
+          <Link
+            className='text-sctblue text-lg hidden sm:flex  underline justify-end'
+            href='/news'
+          >
+            More
+          </Link>
+        </div>
+        <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-5 gap-y-12'>
+          {articles.slice(0, 3).map((article: any) => (
+            <NewsCard key={article.id} {...article} />
+          ))}
+        </section>
+        <Link className='mt-10 flex justify-center sm:hidden' href='/news'>
+          <Button extrStyles='px-4 text-sm text-white' color='bg-sctblue'>
+            More ..
+          </Button>
         </Link>
       </div>
-      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-5 gap-y-12'>
-        {articles.slice(0, 3).map((article: any) => (
-          <NewsCard key={article.id} {...article} />
-        ))}
-      </section>
-      <Link className='mt-10 block sm:hidden' href='/news'>
-        <Button extrStyles='px-4 text-sm text-white' color='bg-sctblue'>
-          More ..
-        </Button>
-      </Link>
     </div>
   );
 };
