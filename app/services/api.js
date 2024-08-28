@@ -41,3 +41,36 @@ export const getSCTStory = async (slug) => {
     return null;
   }
 };
+
+export const getSCTCourses = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/api/courses`);
+    return response.data.data.map((course) => ({
+      id: course.id,
+      ...course.attributes,
+    }));
+  } catch (error) {
+    console.error('Error fetching courses:', error);
+    return [];
+  }
+};
+
+export const getSCTCourse = async (slug) => {
+  try {
+    const response = await axios.get(
+      `${API_URL}/api/courses?filters[slug][$eq]=${slug}`
+    );
+    const course = response.data.data[0];
+    if (course) {
+      return {
+        id: course.id,
+        ...course.attributes,
+      };
+    } else {
+      return null;
+    }
+  } catch (error) {
+    console.error('Error fetching course:', error);
+    return null;
+  }
+};
