@@ -1,9 +1,10 @@
 'use client';
-import { news } from '@/app/data/news';
 import NewsCard from '../common/cards/NewsCard';
 import { useState, useEffect } from 'react';
 
-const NewsList = () => {
+const NewsList = ({ articles }: any) => {
+  console.log(articles);
+
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const NewsList = () => {
   }, []);
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 sm:gap-x-5 gap-y-12 z-10'>
-      {news.map((item, index) => {
+      {articles.map((item: any, index: number) => {
         const rowIndex = Math.floor(index / 3);
         const positionInRow = index % 3;
 

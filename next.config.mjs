@@ -6,6 +6,7 @@ const nextConfig = {
   images: {
     domains: [process.env.DOMAIN],
   },
+  reactStrictMode: false,
 };
 
 export default nextConfig;

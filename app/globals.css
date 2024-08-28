@@ -1,5 +1,5 @@
 body {
-  font-family: "Degular", sans-serif;
+  font-family: 'Degular', sans-serif;
 }
 @tailwind base;
 @tailwind components;
@@ -26,4 +26,8 @@ body {
 
 .nav-active-elem {
   color: #03979c;
+}
+
+.sct-bg {
+  background-image: url('../app/assets/illustrations/sct-bg.svg');
 }
