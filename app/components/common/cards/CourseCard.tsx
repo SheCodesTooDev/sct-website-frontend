@@ -28,10 +28,7 @@ const CourseCard = ({ title, description }: any) => {
             ))}
           </div>
           <Link className='mt-4' href='news'>
-            <Button
-              extrStyles='text-base bg-sctyellow text-black'
-              color='bg-sctyellow'
-            >
+            <Button extrStyles='text-base text-black' color='bg-sctyellow'>
               Join -&gt;
             </Button>
           </Link>

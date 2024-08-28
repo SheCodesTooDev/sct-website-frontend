@@ -1,16 +1,18 @@
 import Image from 'next/image';
-import { NewsProps } from '@/app/types/newsTypes';
 import Link from 'next/link';
 
-const NewsCard: React.FC<NewsProps> = ({ image, title, date }) => {
+const NewsCard = ({ photo, title, date, slug }: any) => {
   return (
     <div className='text-start'>
-      <div className=''>
-        <Image
-          className='rounded-xl w-full h-80  md:h-80  lg:h-92 object-cover'
-          src={image}
-          alt='illustration'
-        />
+      <div>
+        <div className='relative w-full h-80  md:h-80  lg:h-92'>
+          <Image
+            className='rounded-xl w-full h-80  md:h-80  lg:h-92 object-cover'
+            src={photo}
+            layout='fill'
+            alt='illustration'
+          />
+        </div>
         <p className=' mt-4 font-medium text-xs lg:text-sm text-secondary'>
           📅 {date}
         </p>
@@ -18,7 +20,7 @@ const NewsCard: React.FC<NewsProps> = ({ image, title, date }) => {
         <div className='flex flex-col justify-start items-start'>
           <p className='font-medium text-lg lg:text-xl mt-2 my-3'>{title}</p>
           <Link
-            href={`/news/test`}
+            href={`/news/${slug}`}
             className='text-sctblue text-sm  underline flex justify-end'
           >
             Read more -&gt;
