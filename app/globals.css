@@ -31,3 +31,19 @@ body {
 .sct-bg {
   background-image: url('../app/assets/illustrations/sct-bg.svg');
 }
+
+.green-square {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .green-square {
+    display: block;
+    background-image: url('../app/assets/illustrations/green-square.svg');
+    width: 400px;
+    height: 350px;
+    transform: translateY(30px);
+    position: absolute;
+    right: 0;
+  }
+}
