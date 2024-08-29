@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const AboutCard = ({ title, description, icon }: any) => {
   return (
-    <div className='relative bg-white border border-t-2 border-r-2 border-l-2 rounded-xl shadow-xl flex py-2  px-6 justify-center'>
+    <div className='relative bg-white border border-t-2 border-r-2 border-l-2 rounded-md shadow-xl flex py-2  px-6 justify-center'>
       <div className='my-5'>
         <div
           className='absolute -top-10 left-1/2 transform -translate-x-1/2

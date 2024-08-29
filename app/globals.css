@@ -31,6 +31,14 @@ body {
 .sct-bg {
   background-image: url('../app/assets/illustrations/sct-bg.svg');
 }
+.yellow-vector-bg {
+  background-image: url('../app/assets/illustrations/yellow-vector.svg');
+  background-repeat: no-repeat;
+}
+.blue-vector-bg {
+  background-image: url('../app/assets/illustrations/blue-vector.svg');
+  background-repeat: no-repeat;
+}
 
 .green-square {
   display: none;
