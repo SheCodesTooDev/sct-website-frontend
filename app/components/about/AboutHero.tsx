@@ -2,7 +2,7 @@ import YellowLine from '../common/YellowLine';
 
 const AboutHero = () => {
   return (
-    <>
+    <div className='flex justify-center flex-col items-center'>
       <div className='green-square'></div>
       <p className='font-bold text-4xl leading-loose text-sctblue '>About </p>
 
@@ -20,7 +20,7 @@ const AboutHero = () => {
         to reach maximum benefits for the participants and enable them to secure
         tech jobs.
       </p>
-    </>
+    </div>
   );
 };
 
