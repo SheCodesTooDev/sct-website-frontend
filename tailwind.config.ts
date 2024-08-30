@@ -14,7 +14,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        sans: ["Degular", "sans-serif"],
+        sans: ['Degular', 'sans-serif'],
       },
     },
     colors: {
@@ -23,6 +23,7 @@ const config: Config = {
       sctblue: '#03979C',
       sctyellow: '#fbbf31',
       secondary: '#757575',
+      yellowgradient: '#FBBF31',
     },
   },
   plugins: [],
