@@ -113,3 +113,36 @@ export const getSCTCourse = async (slug) => {
     return null;
   }
 };
+
+export const getSCTQuestions = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/api/faqs?populate=*`);
+    return response.data.data.map((faq) => ({
+      id: faq.id,
+      ...faq.attributes,
+    }));
+  } catch (error) {
+    console.error('Error fetching faqs:', error);
+    return [];
+  }
+};
+
+export const getSCTQuestion = async (slug) => {
+  try {
+    const response = await axios.get(
+      `${API_URL}/api/faqs?filters[slug][$eq]=${slug}&populate=*`
+    );
+    const faq = response.data.data[0];
+    if (faq) {
+      return {
+        id: faq.id,
+        ...faq.attributes,
+      };
+    } else {
+      return null;
+    }
+  } catch (error) {
+    console.error('Error fetching faq:', error);
+    return null;
+  }
+};
