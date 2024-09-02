@@ -23,7 +23,6 @@ const config: Config = {
       sctblue: '#03979C',
       sctyellow: '#fbbf31',
       secondary: '#757575',
-      yellowgradient: '#FBBF31',
     },
   },
   plugins: [],
