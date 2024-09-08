@@ -1,5 +1,5 @@
 body {
-  font-family: "Degular", sans-serif;
+  font-family: 'Degular', sans-serif;
 }
 @tailwind base;
 @tailwind components;
@@ -26,4 +26,32 @@ body {
 
 .nav-active-elem {
   color: #03979c;
+}
+
+.sct-bg {
+  background-image: url('../app/assets/illustrations/sct-bg.svg');
+}
+.yellow-vector-bg {
+  background-image: url('../app/assets/illustrations/yellow-vector.svg');
+  background-repeat: no-repeat;
+}
+.blue-vector-bg {
+  background-image: url('../app/assets/illustrations/blue-vector.svg');
+  background-repeat: no-repeat;
+}
+
+.green-square {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .green-square {
+    display: block;
+    background-image: url('../app/assets/illustrations/green-square.svg');
+    width: 400px;
+    height: 350px;
+    transform: translateY(30px);
+    position: absolute;
+    right: 0;
+  }
 }
