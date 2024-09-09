@@ -1,4 +1,4 @@
-import Student from '../../public/images/8 .jpeg';
+import Student from '../../public/images/5.jpg';
 
 export const news = [
   {
@@ -22,6 +22,256 @@ export const news = [
   },
   {
     id: 3,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
+    image: Student,
+    title:
+      'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
+
+    date: '14/8/2023',
+    description:
+      'SCT offers diverse Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites covering HTML, CSS, Dart, C++, and WordPress, providing essential skills for tech careers.',
+  },
+  {
+    id: 4,
     image: Student,
     title:
       'Mastering Responsive Design: Tips for Creating Mobile-Friendly Websites',
