@@ -2,7 +2,7 @@ import React from 'react';
 import { getSCTStories } from '../services/api';
 import { truncateText } from '../utils/truncateText';
 import YellowLine from '../components/common/YellowLine';
-
+import '../globals.css';
 const Stories = async () => {
   const stories = await getSCTStories();
   if (!Array.isArray(stories)) {
@@ -12,62 +12,70 @@ const Stories = async () => {
 
   return (
     <div>
-     <div className=' flex flex-col w-full justify-center items-center pt-20 px-5 text-center'>
-      <p className='font-bold text-sctblue text-5xl leading-loose'>
-Our Success  Story     </p>
+     <div className=' flex flex-col w-full justify-center items-center pt-20 px-5 text-center '>
+      <p className='font-bold text-sctblue text-5xl leading-loose'>Our Success  Story </p>
       <YellowLine />
-      <p className='font-medium text-2xl md:text-lg leading-loose '>
-      Transforming Ambition into Expertise: Success Stories from  
-      <p className='font-bold text-center'>  She Codes Too Front-End Developers. </p>      </p>
+      <p className='font-medium text-2xl md:text-lg leading-loose'>
+  Transforming Ambition into Expertise: Success Stories from  
+  <span className='font-bold text-center block'>She Codes Too Front-End Developers.</span>
+</p>
+
+
     </div>
       
-    <div className='flex flex-wrap gap-4 p-4 justify-center items-center'>
+    <div className='flex flex-wrap gap-4 p-4 justify-center items-center  '>
   {stories.map((story) => (
-    <div key={story.id} className='p-4 border-2 w-1/4 flex-col justify-center items-center'>
-     {story.photo && (
-  <svg
-    className="relative z-30"
-    width="346"
-    height="306"
-    viewBox="0 0 346 306"
+    <div key={story.id} className='p-4 border-2 w-1/4 flex-col justify-center items-center rounded-3xl'>
+<svg
+  viewBox="0 0 346 306"
+  xmlns="http://www.w3.org/2000/svg"
+  width="346"
+  height="306"
+  className="relative"
+>
+  <defs>
+    <clipPath id="clipPathShape">
+      <path d="M180.211 0.083388C204.478 1.05628 218.717 28.5011 241.362 37.255C269.675 48.2002 307.425 35.7334 328.591 57.4438C349.177 78.5601 344.94 113.415 344.312 142.856C343.693 171.855 337.85 200.176 324.988 226.194C311.555 253.368 295.725 281.811 268.74 295.735C242.032 309.516 209.571 307.381 180.211 300.896C153.97 295.101 136.481 271.577 111.758 261.065C82.5734 248.657 43.4408 257.34 22.2963 233.756C1.35633 210.399 -6.37526 171.745 5.77734 142.856C18.352 112.963 60.935 110.376 83.8646 87.396C99.185 72.0417 100.078 46.8029 116.153 32.2353C128.901 6.48119 155.91 -0.890817 180.211 0.083388Z"/>
+    </clipPath>
+  </defs>
+
+  <path
+    fillRule="evenodd"
+    clipRule="evenodd"
+    d="M180.211 0.083388C204.478 1.05628 218.717 28.5011 241.362 37.255C269.675 48.2002 307.425 35.7334 328.591 57.4438C349.177 78.5601 344.94 113.415 344.312 142.856C343.693 171.855 337.85 200.176 324.988 226.194C311.555 253.368 295.725 281.811 268.74 295.735C242.032 309.516 209.571 307.381 180.211 300.896C153.97 295.101 136.481 271.577 111.758 261.065C82.5734 248.657 43.4408 257.34 22.2963 233.756C1.35633 210.399 -6.37526 171.745 5.77734 142.856C18.352 112.963 60.935 110.376 83.8646 87.396C99.185 72.0417 100.078 46.8029 116.153 32.2353C128.901 6.48119 155.91 -0.890817 180.211 0.083388Z"
+    stroke="#03979C"
+    strokeWidth="4"  // زيادة سمك الإطار
     fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <clipPath id={`clip-path-${story.id}`}>
-        <path d="M180.211 0.083388C204.478 1.05628 218.717 28.5011 241.362 37.255C269.675 48.2002 307.425 35.7334 328.591 57.4438C349.177 78.5601 344.94 113.415 344.312 142.856C343.693 171.855 337.85 200.176 324.988 226.194C311.555 253.368 295.725 281.811 268.74 295.735C242.032 309.516 209.571 307.381 180.211 300.896C153.97 295.101 136.481 271.577 111.758 261.065C82.5734 248.657 43.4408 257.34 22.2963 233.756C1.35633 210.399 -6.37526 171.745 5.77734 142.856C18.352 112.963 60.935 110.376 83.8646 87.396C99.185 72.0417 100.078 46.8029 116.153 32.2353C128.901 6.48119 155.91 -0.890817 180.211 0.083388Z" />
-      </clipPath>
-    </defs>
+  />
+
+  {story.photo && (
     <image
       href={story.photo}
       x="0"
       y="0"
       width="346"
       height="306"
-      clipPath={`url(#clip-path-${story.id})`}
-      preserveAspectRatio="xMidYMid slice" // Adjust this as needed
+      preserveAspectRatio="xMidYMid slice"
+      clipPath="url(#clipPathShape)"
     />
-    <path
-      d="M180.211 0.083388C204.478 1.05628 218.717 28.5011 241.362 37.255C269.675 48.2002 307.425 35.7334 328.591 57.4438C349.177 78.5601 344.94 113.415 344.312 142.856C343.693 171.855 337.85 200.176 324.988 226.194C311.555 253.368 295.725 281.811 268.74 295.735C242.032 309.516 209.571 307.381 180.211 300.896C153.97 295.101 136.481 271.577 111.758 261.065C82.5734 248.657 43.4408 257.34 22.2963 233.756C1.35633 210.399 -6.37526 171.745 5.77734 142.856C18.352 112.963 60.935 110.376 83.8646 87.396C99.185 72.0417 100.078 46.8029 116.153 32.2353C128.901 6.48119 155.91 -0.890817 180.211 0.083388Z"
-      fill="none"
-      stroke="#03979C"
-      strokeWidth="5"
-    />
-  </svg>
-)}
-      <h2 className='text-xl font-semibold'>{story.title}</h2>
+  )}
+
+
+</svg>
+
+      <h2 className='text-xl font-semibold text-center'>{story.title}</h2>
       {story.content.map((block: any, index: number) => (
         <div key={index}>
           {block.type === 'heading' &&
             block.level === 1 &&
             block.children.map((child: any, idx: number) => (
-              <h1 key={idx} className='text-xl font-medium'>
+              <h1 key={idx} className='text-xl font-medium text-center'>
                 {truncateText(child.text, 100)}
               </h1>
             ))}
         </div>
       ))}
-      <a href={`/success-stories/${story.slug}`} className='flex hover:underline  items-center'>
+      <a href={`/success-stories/${story.slug}`} className='flex hover:underline justify-center  items-center'>
       <h1 className=' font-bold'>        Read more 
       </h1>
         <svg width="25" height="14" viewBox="0 0 25 14" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,7 +1,6 @@
 import React from 'react';
 import { getSCTStory, getSCTStories } from '../../services/api';
 
-// Component to render individual story
 const Story = async ({ params }) => {
   const { slug } = params;
   const story = await getSCTStory(slug);
@@ -13,10 +12,10 @@ const Story = async ({ params }) => {
   return (
     <div className=' w-full'>
       <h1 className=' text-sctblue text-3xl text-center '>{story.title}</h1>
-      <div className=' flex  justify-between items-start  p-8 '>
-        <div className='relative top-0 '>
+      <div className=' flex  justify-between   p-8 '>
+        <div className='relative flex  justify-between '>
           <svg
-            className='absolute inset-0 -right-16 -top-8 -p-6 -z-20'
+            className='absolute inset-0 -mt-12 -ml-12  '
             width='346'
             height='306'
             viewBox='0 0 346 306'
@@ -29,7 +28,7 @@ const Story = async ({ params }) => {
               d='M180.211 0.083388C204.478 1.05628 218.717 28.5011 241.362 37.255C269.675 48.2002 307.425 35.7334 328.591 57.4438C349.177 78.5601 344.94 113.415 344.312 142.856C343.693 171.855 337.85 200.176 324.988 226.194C311.555 253.368 295.725 281.811 268.74 295.735C242.032 309.516 209.571 307.381 180.211 300.896C153.97 295.101 136.481 271.577 111.758 261.065C82.5734 248.657 43.4408 257.34 22.2963 233.756C1.35633 210.399 -6.37526 171.745 5.77734 142.856C18.352 112.963 60.935 110.376 83.8646 87.396C99.185 72.0417 100.078 46.8029 116.153 32.2353C128.901 6.48119 155.91 -0.890817 180.211 0.083388Z'
               fill='#03979C'
             />
-          </svg>
+          </svg> 
 
           {story.photo && (
             <svg
@@ -58,16 +57,31 @@ const Story = async ({ params }) => {
                 d='M180.211 0.083388C204.478 1.05628 218.717 28.5011 241.362 37.255C269.675 48.2002 307.425 35.7334 328.591 57.4438C349.177 78.5601 344.94 113.415 344.312 142.856C343.693 171.855 337.85 200.176 324.988 226.194C311.555 253.368 295.725 281.811 268.74 295.735C242.032 309.516 209.571 307.381 180.211 300.896C153.97 295.101 136.481 271.577 111.758 261.065C82.5734 248.657 43.4408 257.34 22.2963 233.756C1.35633 210.399 -6.37526 171.745 5.77734 142.856C18.352 112.963 60.935 110.376 83.8646 87.396C99.185 72.0417 100.078 46.8029 116.153 32.2353C128.901 6.48119 155.91 -0.890817 180.211 0.083388Z'
                 fill='none'
                 stroke='#03979C'
-                strokeWidth='5'
+                strokeWidth='3'
               />
             </svg>
           )}
         </div>
-        <div>
+        <div className=' flex  '>
+        {story.content.map((block, index) => (
+          <div key={index} className=' relative   '>
+           
+            {block.type === 'heading' &&
+              block.level === 5 &&
+              block.children.map((child, idx) => (
+                <h1 className='font-normal ' key={idx}>
+                  {child.text}
+                </h1>
+              ))}
+           
+          </div>
+        ))}
+        <div className='-z-50 relative top-0'>
+
           <svg
             width='500'
             height='565'
-            className='-z-50'
+            className=''
             viewBox='0 0 432 565'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
@@ -81,7 +95,7 @@ const Story = async ({ params }) => {
           <svg
             width='128'
             height='197'
-            className='-z-20 relative bottom-0'
+            className='-z-60  bottom-0'
             viewBox='0 0 128 197'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
@@ -94,8 +108,8 @@ const Story = async ({ params }) => {
             />
           </svg>
         </div>
+        </div> 
       </div>
-      <p className='text-4xl'>HIII</p>
 
       <div className='flex-col font-thin text-sm p-10 justify-center items-center'>
         {story.content.map((block, index) => (
@@ -103,7 +117,7 @@ const Story = async ({ params }) => {
             {block.type === 'paragraph' &&
               block.children.map((child, idx) =>
                 child.type === 'text' ? (
-                  <p className='text-green-600' key={idx}>
+                  <p className='text-black font-normal' key={idx}>
                     {child.text}
                   </p>
                 ) : child.type === 'link' ? (
@@ -112,23 +126,22 @@ const Story = async ({ params }) => {
                   </a>
                 ) : null
               )}
-            {block.type === 'heading' &&
-              block.level === 5 &&
-              block.children.map((child, idx) => (
-                <h1 className='text-blue-500' key={idx}>
-                  {child.text}
-                </h1>
-              ))}
+           
             {block.type === 'heading' &&
               block.level === 6 &&
               block.children.map((child, idx) => (
-                <h2
-                  className='text-red-500 border-2 rounded-xl p-3 bg-sctyellow'
+              
+              <div className='bg-sctyellow bg-opacity-20  rounded-xl p-3 '>  
+              <h2
+                  className='text-black  font-bold'
                   key={idx}
                 >
                   {child.text}
                 </h2>
+                </div>
               ))}
+              
+
           </div>
         ))}
       </div>
