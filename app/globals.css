@@ -1,5 +1,6 @@
 body {
   font-family: 'Degular', sans-serif;
+  overflow-x: hidden ;
 }
 @tailwind base;
 @tailwind components;
@@ -10,6 +11,7 @@ body {
     text-wrap: balance;
   }
 }
+
 .svg-container {
   height: 65px; /* Desired reduced height */
   overflow: hidden;
