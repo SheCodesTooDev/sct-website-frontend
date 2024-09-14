@@ -1,5 +1,11 @@
 import Button from '../common/Button';
 import styles from '../style/Home.module.css';
+import arrow1 from '../../assets/arrows/homearrows/explorearrows/explorearrow1.svg'
+import arrow2 from '../../assets/arrows/homearrows/explorearrows/explorearrow2.svg'
+import arrow3 from '../../assets/arrows/homearrows/explorearrows/explorearrow3.svg'
+import arrow4 from '../../assets/arrows/homearrows/explorearrows/explorearrow4.svg'
+import Image from 'next/image';
+
 const ExploreSection = () => {
   return (
     <div className='my-10'>
@@ -13,6 +19,8 @@ const ExploreSection = () => {
           <Button color='bg-sctyellow text-black'>Explore Our Courses</Button>
         </div>{' '}
       </div>
+      <Image src={arrow2} alt='arrow' className='absolute -bottom-6' style={{right:'340px'}}/>
+      <Image src={arrow3} alt='arrow' className='absolute -bottom-28' style={{left:'630px'}}/>
       <div className={styles.homeImages}>
         <div className={styles.columnOne}>
           <img src='/images/1.jpg' alt='Image 1' />
@@ -38,6 +46,8 @@ const ExploreSection = () => {
           <img src='/images/10 .jpeg' alt='Image 10' />
         </div>
       </div>
+      <Image src={arrow1} alt='arrow' className='absolute right-36 ' style={{bottom:'-940px'}}/>
+      <Image src={arrow4} alt='arrow' className='absolute left-48' style={{bottom:'-950px'}}/>
     </div>
   );
 };
