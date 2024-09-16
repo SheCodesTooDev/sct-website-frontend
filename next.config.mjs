@@ -4,7 +4,7 @@ const nextConfig = {
     API_URL: process.env.API_URL,
   },
   images: {
-    domains: ['process','env','DOMAIN'],
+    domains: [process.env.DOMAIN],
   },
   reactStrictMode: false,
 };
