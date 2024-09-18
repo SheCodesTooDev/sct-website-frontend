@@ -1,5 +1,6 @@
 import React from 'react';
 import { getSCTStory, getSCTStories } from '../../services/api';
+import YellowLine from '@/app/components/common/YellowLine';
 
 const Story = async ({ params }) => {
   const { slug } = params;
@@ -11,11 +12,18 @@ const Story = async ({ params }) => {
 
   return (
     <div className=' w-full'>
-      <h1 className=' text-sctblue text-3xl text-center '>{story.title}</h1>
-      <div className=' flex  justify-between   p-8 '>
-        <div className='relative flex  justify-between '>
+      <div className='flex flex-col w-full justify-center items-center pt-20 px-5 text-center'>
+         <h1 className=' text-sctblue text-3xl text-center p-4 '>{story.title}
+        
+      </h1>
+       <YellowLine/>
+      </div>
+     
+     
+      <div className=' flex  flex-col lg:flex-row     '>
+        <div className='relative flex top-28 p-8 '>
           <svg
-            className='absolute inset-0 -mt-12 -ml-12  '
+            className='absolute inset-0 -mt-12  hidden md:block  '
             width='346'
             height='306'
             viewBox='0 0 346 306'
@@ -62,7 +70,8 @@ const Story = async ({ params }) => {
             </svg>
           )}
         </div>
-        <div className=' flex  '>
+        <div className=' flex     '>
+          <div className='relative left-28 top-36  w-full'>
         {story.content.map((block, index) => (
           <div key={index} className=' relative   '>
            
@@ -75,8 +84,8 @@ const Story = async ({ params }) => {
               ))}
            
           </div>
-        ))}
-        <div className='-z-50 relative top-0'>
+        ))}</div>
+        <div className=' md:-z-50 md:relative md:top-0  hidden xl:block'>
 
           <svg
             width='500'
@@ -111,7 +120,7 @@ const Story = async ({ params }) => {
         </div> 
       </div>
 
-      <div className='flex-col font-thin text-sm p-10 justify-center items-center'>
+      <div className='flex-col font-thin text-sm p-10 justify-center items-center mt-96 lg:-mt-10'>
         {story.content.map((block, index) => (
           <div key={index}>
             {block.type === 'paragraph' &&
