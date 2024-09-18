@@ -17,11 +17,13 @@ const EmpoweringSection = () => {
       </div>
 
       <p className="text-sm sm:text-lg font-thin text-center mt-0 -mb-10">
-        We are an educational organisation based in Iraq dedicated to empowering
-        young Iraqi women in the tech industry
+        In a world where technology is everywhere, too many women are being left
+        behind. <br /> At She Codes Too, we’re here to change that. We are
+        building a supportive community where women can learn to code, discover
+        their potential, and grow in confidence.
         <br />
-        by equipping them with essential programming skills necessary to pursue
-        careers in tech.
+        Each woman’s journey is unique, and we’re here to help her rise,
+        connect, and make a meaningful impact in her community.
       </p>
 
       <div className="flex flex-wrap justify-center  mt-0 mb-0 gap-1 sm:gap-3">
@@ -225,8 +227,9 @@ const EmpoweringSection = () => {
               Educational Approach
             </h1>
             <p className="text-center mt-10 font-thin">
-              We diverse range of courses covers various programming topics,
-              allowing participants to explore their desired areas of interest.
+              With a diverse range of courses covering various programming
+              topics, women are empowered to explore their areas of interest and
+              passion.
             </p>
           </div>
         </div>
@@ -332,10 +335,9 @@ const EmpoweringSection = () => {
               </svg>
             </div>
             <h1 className="text-center mt-10 font-black">
-              Personalized Mentoring
+              Personalised Mentoring
             </h1>
             <p className="text-center mt-10 font-thin">
-              {" "}
               including valuable insights on career development, to ensure our
               participants maximise their learning experience.
             </p>
