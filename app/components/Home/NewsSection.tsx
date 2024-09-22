@@ -24,10 +24,10 @@ const News = async () => {
       <div className='xl:grid xl:grid-cols-2 items-center gap-20'>
         <section className='order-2'>
           <BigNewsCard
-            id={articles[0].id}
-            title={articles[0].title}
-            image={articles[0].photo}
-            date={articles[0].date}
+            id={articles[0]?.id}
+            title={articles[0]?.title}
+            image={articles[0]?.photo}
+            date={articles[0]?.date}
           />
         </section>
         <section>
