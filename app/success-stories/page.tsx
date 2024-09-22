@@ -12,7 +12,7 @@ const Stories = async () => {
   }
 
   return (
-    <div className='flex flex-col items-center pt-20 px-5 text-center bg-gray-100'>
+    <div className='flex flex-col items-center pt-20 px-5 text-center bg-gray-100  '>
       <p className='font-bold text-sctblue text-5xl leading-tight mb-4'>Our Success Story</p>
       <YellowLine />
       <p className='font-medium text-2xl md:text-lg leading-loose mb-8'>
@@ -20,7 +20,7 @@ const Stories = async () => {
         <span className='font-bold block mt-2'>She Codes Too Front-End Developers.</span>
       </p>
 
-      <div className='flex flex-wrap gap-6 p-4 justify-center items-center'>
+      <div className='grid grid-cols-1 p-4 justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-4  '>
         {stories.map((story) => (
           <div key={story.id} className='bg-white p-6 border border-gray-200 rounded-3xl shadow-lg w-full md:w-3/4 '>
             <svg
