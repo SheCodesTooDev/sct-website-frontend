@@ -1,6 +1,6 @@
 body {
   font-family: 'Degular', sans-serif;
-  overflow-x: hidden ;
+  overflow-x: hidden;
 }
 @tailwind base;
 @tailwind components;
@@ -30,30 +30,55 @@ body {
   color: #03979c;
 }
 
-.sct-bg {
-  background-image: url('../app/assets/illustrations/sct-bg.svg');
+.split-background {
+  display: flex;
+  width: 100%;
+  height: 100% !important; /* Full viewport height */
+  background: linear-gradient(to right, white 50%, #03979c2b 50%);
+  justify-content: center;
+  color: black;
+  text-align: center;
+  position: relative;
 }
-.yellow-vector-bg {
-  background-image: url('../app/assets/illustrations/yellow-vector.svg');
-  background-repeat: no-repeat;
+.split-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5%;
+  height: 100% !important; /* Full viewport height */
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  z-index: 0;
 }
-.blue-vector-bg {
-  background-image: url('../app/assets/illustrations/blue-vector.svg');
-  background-repeat: no-repeat;
-}
+.content {
+  z-index: 1;
+  position: relative;
+  .sct-bg {
+    background-image: url('../app/assets/illustrations/sct-bg.svg');
+  }
+  .yellow-vector-bg {
+    background-image: url('../app/assets/illustrations/yellow-vector.svg');
+    background-repeat: no-repeat;
+  }
+  .blue-vector-bg {
+    background-image: url('../app/assets/illustrations/blue-vector.svg');
+    background-repeat: no-repeat;
+  }
 
-.green-square {
-  display: none;
-}
-
-@media (min-width: 1024px) {
   .green-square {
-    display: block;
-    background-image: url('../app/assets/illustrations/green-square.svg');
-    width: 400px;
-    height: 350px;
-    transform: translateY(30px);
-    position: absolute;
-    right: 0;
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    .green-square {
+      display: block;
+      background-image: url('../app/assets/illustrations/green-square.svg');
+      width: 400px;
+      height: 350px;
+      transform: translateY(30px);
+      position: absolute;
+      right: 0;
+    }
   }
 }

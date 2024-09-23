@@ -38,7 +38,12 @@ const News = async () => {
       </div>
       <div className='flex justify-center mt-16'>
         <Link href='news'>
-          <Button color='bg-sctblue text-white'>More news</Button>
+          <Button
+            extrStyles='hover:bg-sctyellow hover:text-black'
+            color='bg-sctblue text-white'
+          >
+            More news
+          </Button>
         </Link>
       </div>
     </div>
