@@ -6,12 +6,10 @@ import InquirySection from './components/Home/InquirySection';
 import Partners from './components/Home/PartnersSection';
 import Courses from './components/Home/CoursesSection';
 import SuccessStories from './components/Home/SuccessStoriesSection';
-import TitleSection from './components/Home/TitleSection';
-import NewExploreSection from './components/Home/NewExploreSection';
 export default function Home() {
   return (
     <>
-      <NewExploreSection />
+      <ExploreSection />
       <EmpoweringSection />
       <Courses />
       <SuccessStories />

@@ -1,6 +1,6 @@
 body {
   font-family: 'Degular', sans-serif;
-  overflow-x: hidden ;
+  overflow-x: hidden;
 }
 @tailwind base;
 @tailwind components;
@@ -47,7 +47,6 @@ body {
   bottom: 0;
   width: 5%;
   height: 100% !important; /* Full viewport height */
-
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   z-index: 0;
