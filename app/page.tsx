@@ -8,7 +8,7 @@ import Courses from './components/Home/CoursesSection';
 import SuccessStories from './components/Home/SuccessStoriesSection';
 export default function Home() {
   return (
-    <>
+    <div className='sct-bg'>
       <ExploreSection />
       <EmpoweringSection />
       <Courses />
@@ -17,6 +17,6 @@ export default function Home() {
       <Blogs />
       <InquirySection />
       <Partners />
-    </>
+    </div>
   );
 }
