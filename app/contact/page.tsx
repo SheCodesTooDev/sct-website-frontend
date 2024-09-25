@@ -2,7 +2,9 @@ import React from "react";
 import YellowLine from "../components/common/YellowLine";
 const contact = () => {
   return (
+
     <div className="flex flex-col items-center pt-20 px-5 text-center bg-gray-100  h-screen ">
+    
       <p className="font-bold text-sctblue text-5xl leading-tight mb-4">
         Contact Us
       </p>
@@ -77,8 +79,6 @@ const contact = () => {
         </div>
 </div>
 
-
-    </div>
   );
 };
 
