@@ -1,6 +1,7 @@
-import Blueline from '../common/BlueLine';
+'use client';
 import YellowLine from '../common/YellowLine';
 import ExploreGallery from './ExploreGallery';
+import { motion } from 'framer-motion';
 
 const NewExploreSection = () => {
   return (
@@ -10,9 +11,15 @@ const NewExploreSection = () => {
           Inspiring Women To Code
         </p>
         <YellowLine />
-        <p className='font-md text-2xl leading-loose md:w-full'>
-          Explore the programming areas of interest you desire.
-        </p>
+        <motion.div
+          initial={{ x: -500, y: 0, opacity: 0 }}
+          animate={{ x: 0, y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.25, type: 'tween' }}
+        >
+          <p className='font-md text-2xl leading-loose md:w-full'>
+            Explore the programming areas of interest you desire.
+          </p>
+        </motion.div>
       </div>
       <ExploreGallery />
     </>
