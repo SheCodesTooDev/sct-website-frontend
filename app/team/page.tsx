@@ -11,10 +11,10 @@ import arrow3 from "../assets/arrows/teamarrows/teamarrow3.svg";
 
 const TeamPage = () => {
   return (
-    <div className="flex items-center justify-center">
-      <div className="w-4/5">
+    <div className="">
+      <div className="">
         <h1
-          className="text-center text-sctblue mt-20 text-2xl font-semibold 
+          className="text-center text-sctblue mt-20 text-xl font-bold 
       md:text-4xl
      lg:text-5xl lg:tracking-widest lg:mt-32"
         >
@@ -36,15 +36,15 @@ const TeamPage = () => {
           src={Reactangle}
           alt=""
           className="absolute -right-7 h-auto w-20 top-28 hidden
-       md:w-36 md:top-32 md:right-0 md:inline
-     lg:-right-4 lg:w-72 lg:top-36 "
+      md:hidden
+     lg:-right-4 lg:w-72 lg:top-36 lg:inline"
         />
 
         <Image
           src={arrow2}
           alt="arrow"
           className="absolute left-24 -bottom-56 hidden
- md:w-20 md:h-auto md:left-3 md:inline md:bottom-1/3 
+ md:hidden
     lg:w-40 lg:h-auto lg:left-28 lg:inline lg:-bottom-36"
         />
 
@@ -52,13 +52,13 @@ const TeamPage = () => {
           src={arrow3}
           alt="arrow"
           className="absolute right-44 -bottom-52 hidden
- md:bottom-80 md:w-9 md:h-auto md:right-1 md:inline
+ md:hidden
  lg:-bottom-36 lg:w-16 lg:h-auto lg:right-52 lg:inline"
         />
 
-        <div className="flex justify-center">
+       
           <Teamsection />
-        </div>
+
       </div>
       <Background />
     </div>
