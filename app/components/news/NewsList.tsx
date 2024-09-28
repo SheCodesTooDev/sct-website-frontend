@@ -1,6 +1,6 @@
-"use client";
-import NewsCard from "../common/cards/NewsCard";
-import { useState, useEffect } from "react";
+'use client';
+import NewsCard from '../common/cards/NewsCard';
+import { useState, useEffect } from 'react';
 
 const NewsList = ({ articles }: any) => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -12,15 +12,15 @@ const NewsList = ({ articles }: any) => {
 
     handleResize();
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     // Cleanup event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 sm:gap-x-5 gap-y-12 z-10">
+    <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 sm:gap-x-5 gap-y-12 z-10'>
       {articles.map((item: any, index: number) => {
         const rowIndex = Math.floor(index / 3);
         const positionInRow = index % 3;
@@ -33,7 +33,7 @@ const NewsList = ({ articles }: any) => {
         return (
           <div
             key={item.id}
-            className={`${shouldSpanTwoColumns ? "xl:col-span-2" : ""}`}
+            className={`${shouldSpanTwoColumns ? 'xl:col-span-2' : ''}`}
           >
             <NewsCard {...item} />
           </div>
