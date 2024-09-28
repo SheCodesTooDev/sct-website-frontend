@@ -23,7 +23,7 @@ const ExploreGallery = () => {
               key={index}
               initial={{ x: 500, y: 0, opacity: 0 }}
               animate={{ x: 0, y: 0, opacity: 1 }}
-              transition={{ duration: 2, delay: 1.3, type: 'tween' }}
+              transition={{ duration: 2, delay: 1, type: 'tween' }}
             >
               <Image
                 className={`md:w-80 md:h-96 w-full h-60 mb-4 object-cover rounded-3xl

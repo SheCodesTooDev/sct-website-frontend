@@ -20,7 +20,7 @@ const Courses = () => (
           viewport={{ once: true }}
           transition={{
             duration: 0.5,
-            delay: index * 1,
+            delay: 1,
             type: 'tween',
             ease: 'easeOut',
           }}
