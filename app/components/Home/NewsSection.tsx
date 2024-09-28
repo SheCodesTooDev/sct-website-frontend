@@ -1,8 +1,6 @@
 import Blueline from '../common/BlueLine';
-import { news } from '@/app/data/news';
 import NewsHomeCard from '../common/cards/NewsHomeCard';
 import BigNewsCard from '../common/cards/BigNewsCard';
-import Student from '@/public/images/8 .jpeg';
 import Button from '../common/Button';
 import Link from 'next/link';
 import { getArticles } from '@/app/services/api';
@@ -31,9 +29,12 @@ const News = async () => {
           />
         </section>
         <section>
-          {articles.slice(0, 3).map((article: any) => (
-            <NewsHomeCard key={article.id} {...article} />
-          ))}
+          {articles
+            .reverse()
+            .slice(0, 3)
+            .map((article: any) => (
+              <NewsHomeCard key={article.id} {...article} />
+            ))}
         </section>
       </div>
       <div className='flex justify-center mt-16'>
