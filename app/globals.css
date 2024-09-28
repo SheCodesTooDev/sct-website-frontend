@@ -1,6 +1,9 @@
+html {
+  overflow-x: hidden !important;
+}
 body {
   font-family: 'Degular', sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 @tailwind base;
 @tailwind components;
@@ -70,32 +73,70 @@ body {
 .content {
   z-index: 1;
   position: relative;
-  .sct-bg {
-    background-image: url('../app/assets/illustrations/sct-bg.svg');
-  }
-  .yellow-vector-bg {
-    background-image: url('../app/assets/illustrations/yellow-vector.svg');
-    background-repeat: no-repeat;
-  }
-  .blue-vector-bg {
-    background-image: url('../app/assets/illustrations/blue-vector.svg');
-    background-repeat: no-repeat;
-  }
+}
+.sct-bg {
+  background-image: url('../app/assets/illustrations/sct-bg.svg');
+}
+.yellow-vector-bg {
+  background-image: url('../app/assets/illustrations/yellow-vector.svg');
+  background-repeat: no-repeat;
+}
 
+.green-square {
+  display: none;
+}
+
+@media (min-width: 1024px) {
   .green-square {
-    display: none;
+    display: block;
+    background-image: url('../app/assets/illustrations/green-square.svg');
+    width: 400px;
+    height: 350px;
+    transform: translateY(30px);
+    position: absolute;
+    right: 0;
+  }
+}
+
+.bracet {
+  background-image: url('../app/assets/illustrations/small-bracet.svg');
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 5%;
+  transform: translate(0, -40px);
+  background-repeat: no-repeat;
+}
+
+.end-bracet {
+  background-image: url('../app/assets/illustrations/small-end-bracet.svg');
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  right: 17%;
+  transform: translate(40px, 230px);
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .bracet {
+    background-image: url('../app/assets/illustrations/bracet.svg');
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 10%;
+    transform: translate(0, 80px);
+    background-repeat: no-repeat;
   }
 
-  @media (min-width: 1024px) {
-    .green-square {
-      display: block;
-      background-image: url('../app/assets/illustrations/green-square.svg');
-      width: 400px;
-      height: 350px;
-      transform: translateY(30px);
-      position: absolute;
-      right: 0;
-    }
+  .end-bracet {
+    background-image: url('../app/assets/illustrations/end-bracet.svg');
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 10%;
+    transform: translate(0, 190px);
+    background-repeat: no-repeat;
   }
 }
 
