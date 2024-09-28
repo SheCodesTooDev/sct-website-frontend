@@ -3,8 +3,6 @@ import NewsCard from '../common/cards/NewsCard';
 import { useState, useEffect } from 'react';
 
 const NewsList = ({ articles }: any) => {
-  console.log(articles);
-
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {

@@ -5,9 +5,9 @@ const NewsCard = ({ photo, title, date, slug }: any) => {
   return (
     <div className='text-start'>
       <div>
-        <div className='relative w-full h-80  md:h-80  lg:h-92'>
+        <div className='relative w-full h-80  md:h-80  lg:h-92 shadow-lg'>
           <Image
-            className='rounded-xl w-full h-80  md:h-80  lg:h-92 object-cover'
+            className='rounded-xl w-full h-80  md:h-80  lg:h-92'
             src={photo}
             layout='fill'
             alt='illustration'
