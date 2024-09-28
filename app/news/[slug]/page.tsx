@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Button from '@/app/components/common/Button';
 import FacebookSvg from '@/app/assets/logos/facebook.svg';
 import InstagramSvg from '@/app/assets/logos/instagram.svg';
+import LinkedinSvg from '@/app/assets/logos/linkedin.svg';
 
 const SingleNewsPage = async ({ params }: any) => {
   const { slug } = params;
@@ -23,12 +24,7 @@ const SingleNewsPage = async ({ params }: any) => {
         <p className='text-3xl w-full font-semibold text-gray-800 mt-5'>
           {article.title}
         </p>
-        <p className='mt-8 text-lg'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed
-          reprehenderit provident?sit amet consectetur, adipisicing elit. Sed
-          reprehenderit provident?sit amet consectetur, adipisicing elit. Sed
-          reprehenderit provident?
-        </p>
+
         <p className='mt-3 font-medium text-base  text-secondary'>
           📅 {article.date}
         </p>
@@ -54,14 +50,14 @@ const SingleNewsPage = async ({ params }: any) => {
               <Link href='https://www.linkedin.com/school/shecodestooiq/'>
                 <Image
                   className=' w-8 h-8 md:w-8 md:h-auto m-10'
-                  src={FacebookSvg}
+                  src={LinkedinSvg}
                   alt="'logo"
                 />
               </Link>
             </div>
             <div className='lg:col-span-10 relative w-full h-96 '>
               <Image
-                className='rounded-xl w-full h-fulls object-cover'
+                className='rounded-xl w-full h-full'
                 src={article.photo}
                 layout='fill'
                 alt='illustration'
@@ -111,9 +107,13 @@ const SingleNewsPage = async ({ params }: any) => {
           </Link>
         </div>
         <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-5 gap-y-12'>
-          {articles.slice(0, 3).map((article: any) => (
-            <NewsCard key={article.id} {...article} />
-          ))}
+          {articles
+            .reverse()
+            .filter((item: any) => item.id !== article.id)
+            .slice(0, 3)
+            .map((article: any) => (
+              <NewsCard key={article.id} {...article} />
+            ))}
         </section>
         <Link className='mt-10 flex justify-center sm:hidden' href='/news'>
           <Button extrStyles='px-4 text-sm text-white' color='bg-sctblue'>
