@@ -6,7 +6,7 @@ const GmailIcon = () => {
     <Image
       src={Gmail}
       alt="Gmail Icon"
-      className=" w-5 ml-1  
+      className=" w-7 ml-1  
       md:w-4 md:pb-2
       lg:inline lg:w-7 lg:ml-1 lg:pb-7 lg:mt-4"
     />
