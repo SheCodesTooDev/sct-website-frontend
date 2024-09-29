@@ -46,7 +46,7 @@ const HomeStoryCard: React.FC<storyProps> = async ({ slug }) => {
   }
 
   return (
-    <div className='bg-gray-200 mt-10 w-full border border-t-1 rounded-lg shadow-md py-2 px-6 md:px-10 lg:px-16 xl:px-16 justify-center items-center md:grid md:grid-cols-2 xl:grid-cols-3'>
+    <div className='bg-gray-200 mt-10 w-full border border-t-1 rounded-3xl shadow-md py-2 px-6 md:px-10 lg:px-16 xl:px-16 justify-center items-center md:grid md:grid-cols-2 xl:grid-cols-3'>
       <section className='order-1'>
         <div className='relative w-64 h-64 md:w-58 md:h-58 xl:w-80 xl:h-80 mt-10 mx-auto '>
           <div className='transparent-image'></div>

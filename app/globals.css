@@ -25,6 +25,11 @@ body {
   border-radius: 500px 0px 500px 500px;
 }
 
+.custom-shape {
+  clip-path: url(#custom-shape);
+  overflow: hidden;
+}
+
 .nav-links :hover {
   color: #03979c;
 }
