@@ -2,7 +2,7 @@ import React from "react";
 import YellowLine from "../components/common/YellowLine";
 const contact = () => {
   return (
-    <div className="flex flex-col items-center pt-20 px-5 text-center bg-gray-100  h-screen ">
+    <div className="flex flex-col items-center pt-20 px-5 text-center bg-gray-100  h-full ">
       <p className="font-bold text-sctblue text-5xl leading-tight mb-4">
         Contact Us
       </p>
@@ -11,7 +11,7 @@ const contact = () => {
         Get in touch with us. We're here to assist you.{" "}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-48 justify-start  ">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-48 justify-start w-screen  ">
         <svg
           width="300"
           height="400"
@@ -27,9 +27,9 @@ const contact = () => {
           />
         </svg>
 
-        <div className=" flex-col justify-center items-center ">
-          <p>Location Info</p>
-          <p>Find Us: Discover our Global Presence and Local Offices</p>
+        <div className=" flex-col   lg:ml-36 lg:mt-8 w-full ">
+          <p className="font-thin text-sm">Location Info</p>
+          <p className=" font-extrabold text-2xl  ">Find Us: Discover our Global Presence and Local Offices</p>
         </div>
         <svg
           width="100"
@@ -77,13 +77,12 @@ const contact = () => {
           />
         </svg>
 
-        <div className="flex-col justify-center items-center">
+        <div className="flex-col justify-start items-start ">
           <svg
             width="32"
             height="32"
             viewBox="0 0 32 32"
             fill="none"
-            className="items-center"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g clip-path="url(#clip0_1127_975)">
@@ -111,7 +110,7 @@ const contact = () => {
               </clipPath>
             </defs>
           </svg>
-          <p>Iraq Office</p>
+          <p className=" text-start text-sm">Iraq Office</p>
           <svg
             width="27"
             height="3"
@@ -122,13 +121,13 @@ const contact = () => {
             <rect width="27" height="3" fill="black" />
           </svg>
 
-          <p>Women of Tomorrow for Educational Development</p>
-          <p>
+          <p className=" text-start text-xl text-sctblue  mt-3">Women of Tomorrow for Educational Development</p>
+          <p className=" text-start  mt-3">
             Baghdad, Karrada, Al-Wahda District, Block 903, Alley 38, House 7,
             Iraq.
           </p>
         </div>
-        <div className="flex-col justify-center items-center">
+        <div className="flex-col  ">
           <svg
             width="32"
             height="32"
@@ -154,7 +153,7 @@ const contact = () => {
             />
           </svg>
 
-          <p>UK Office</p>
+          <p className=" text-start text-sm">UK Office</p>
           <svg
             width="27"
             height="3"
@@ -165,8 +164,8 @@ const contact = () => {
             <rect width="27" height="3" fill="black" />
           </svg>
 
-          <p>She Codes Too</p>
-          <p>
+          <p className=" text-start text-xl text-sctblue mt-3">She Codes Too</p>
+          <p className=" text-start mt-3">
             LYTCHETT HOUSE 3 FREELAND PARK WAREHAM ROAD DORSET, BH16 6FA, UK
           </p>
         </div>
