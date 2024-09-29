@@ -26,6 +26,7 @@ const ExploreGallery = () => {
               transition={{ duration: 2, delay: 0.8, type: 'tween' }}
             >
               <Image
+                blurDataURL='data:image/jpeg...'
                 className={`md:w-80 md:h-96 w-full h-60 mb-4 object-cover rounded-3xl
         ${index % 2 === 1 ? 'translate-y-10 sm:mb-16' : ''}
         ${index % 3 === 0 ? 'md:translate-y-0' : ''}

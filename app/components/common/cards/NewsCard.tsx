@@ -7,6 +7,7 @@ const NewsCard = ({ photo, title, date, slug }: any) => {
       <div>
         <div className='relative w-full h-80  md:h-80  lg:h-92 shadow-lg'>
           <Image
+            blurDataURL='data:image/jpeg...'
             className='rounded-xl w-full h-80  md:h-80  lg:h-92'
             src={photo}
             layout='fill'

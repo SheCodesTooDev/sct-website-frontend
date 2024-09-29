@@ -1,22 +1,55 @@
+'use client';
+import { delay, motion } from 'framer-motion';
 import Blueline from '../common/BlueLine';
 const EmpoweringSection = () => {
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1, delay: 1, ease: 'easeInOut' },
+    },
+  };
+
   return (
-    <div className='relative flex flex-col items-center justify-center min-h-screen p-6 sm:p-4 my-10'>
+    <div className='relative flex flex-col items-center w-full justify-center min-h-screen p-6 sm:p-4 my-10'>
       <div className='absolute bottom-[20%] right-0 w-[400px] h-[200px] bg-gradient-to-bl from-[#00FFFF] to-[#FBBF31] rounded-full opacity-30 transform translate-x-1/1 translate-y-2/4  blur-3xl'></div>
 
       <div className='absolute top-1/3 left-20 w-[400px] h-[200px] bg-gradient-to-br from-[#00FFFF] to-[#FBBF31] rounded-full opacity-30 transform -translate-x-1/2 translate-y-1/2 blur-3xl'></div>
 
-      <h1 className='text-2xl sm:text-4xl leading-tight text-center mt-20'>
+      <motion.h1
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          delay: 0.7,
+          type: 'tween',
+          ease: 'easeOut',
+        }}
+        className='text-2xl sm:text-4xl leading-tight text-center mt-20'
+      >
         Empowering Women,
         <br />
         Building Futures: Our Story
-      </h1>
+      </motion.h1>
 
       <div className='flex items-center justify-center mb-0 sm:mb-0'>
         <Blueline />
       </div>
 
-      <p className='text-sm sm:text-lg font-thin text-center mt-0 -mb-10'>
+      <motion.p
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          delay: 0.7,
+          type: 'tween',
+          ease: 'easeOut',
+        }}
+        className='text-sm sm:text-lg font-thin text-center mt-0 -my-20 md:my-10'
+      >
         In a world where technology is everywhere, too many women are being left
         behind. <br /> At She Codes Too, we’re here to change that. We are
         building a supportive community where women can learn to code, discover
@@ -24,15 +57,21 @@ const EmpoweringSection = () => {
         <br />
         Each woman’s journey is unique, and we’re here to help her rise,
         connect, and make a meaningful impact in her community.
-      </p>
+      </motion.p>
 
-      <div className='flex flex-wrap justify-center  mt-0 mb-0 gap-1 sm:gap-3'>
+      <div className='flex flex-wrap justify-center  mt-0 mb-0 sm:gap-y-12 sm:gap-x-16'>
         {/* Card 1 */}
 
-        <div className='relative flex flex-col items-center justify-center min-h-[70vh] p-2 sm:p-2'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          variants={cardVariants}
+          className='relative flex flex-col items-center justify-center min-h-[70vh] p-2 sm:p-2'
+        >
           <div className='absolute transform translate-x-[-60px] translate-y-[20px] '>
             <svg
-              width='311'
+              width='250'
               height='276'
               viewBox='0 0 311 276'
               fill='none'
@@ -125,10 +164,16 @@ const EmpoweringSection = () => {
               careers as professional programmers.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Card 2 */}
-        <div className='relative flex flex-col items-center justify-center min-h-[50vh] p-2 sm:p-5'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          variants={cardVariants}
+          className='relative flex flex-col items-center justify-center min-h-[50vh] p-2 sm:p-2'
+        >
           <div className='absolute transform translate-x-[-10px] translate-y-[-70px] '>
             <svg
               width='340'
@@ -232,12 +277,18 @@ const EmpoweringSection = () => {
               passion.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* card3 */}
         {/* <div className="absolute transform translate-x-[-10px] translate-y-[-90px] "> */}
 
-        <div className='relative flex flex-col items-center justify-center min-h-[30vh]'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          variants={cardVariants}
+          className='relative flex flex-col items-center justify-center min-h-[30vh] mt-10 sm:mt-0'
+        >
           <div className='absolute transform translate-x-[60px] translate-y-[50px] '>
             <svg
               width='224'
@@ -342,7 +393,7 @@ const EmpoweringSection = () => {
               participants maximise their learning experience.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

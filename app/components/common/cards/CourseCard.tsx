@@ -26,6 +26,7 @@ const CourseCard = ({ title, description, icon, isCourseOpen }: any) => {
     >
       <div className='my-5'>
         <Image
+          blurDataURL='data:image/jpeg...'
           className='w-10 h-10 object-contain mb-4'
           src={Tag}
           alt='partner'

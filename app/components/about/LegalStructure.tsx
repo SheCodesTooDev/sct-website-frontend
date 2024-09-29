@@ -49,12 +49,20 @@ const LegalStructure = () => {
           transition={{ duration: 1, delay: 0.7, ease: 'easeInOut' }}
           viewport={{ once: true }}
         >
-          <Image src={IraqLogo} className='mt-10' alt='iraq-logo' />
+          <Image
+            blurDataURL='data:image/jpeg...'
+            placeholder='blur'
+            loading='lazy'
+            src={IraqLogo}
+            className='mt-10'
+            alt='iraq-logo'
+          />
           <p className='text-3xl font-semibold mt-3'>Iraq Registration</p>
           <hr className='border-2 border-black w-8 mt-5 rounded-xl' />
           <section>
             <div className='flex items-center gap-8'>
               <Image
+                blurDataURL='data:image/jpeg...'
                 src={LegalIllustration}
                 className='mt-10'
                 alt='legal-illustration'
@@ -72,6 +80,7 @@ const LegalStructure = () => {
           <section>
             <div className='flex items-center gap-8'>
               <Image
+                blurDataURL='data:image/jpeg...'
                 src={ContractIllustration}
                 className='mt-10'
                 alt='contract-illustration'
@@ -87,6 +96,7 @@ const LegalStructure = () => {
           <section>
             <div className='flex items-center gap-8'>
               <Image
+                blurDataURL='data:image/jpeg...'
                 src={LocationIllustration}
                 className='mt-10'
                 alt='location-illustration'
@@ -107,13 +117,21 @@ const LegalStructure = () => {
           viewport={{ once: true }}
           className='pt-8 md:pt-0'
         >
-          <Image src={UKLogo} className='mt-10' alt='uk-logo' />
+          <Image
+            blurDataURL='data:image/jpeg...'
+            placeholder='blur'
+            loading='lazy'
+            src={UKLogo}
+            className='mt-10'
+            alt='uk-logo'
+          />
           <p className='text-3xl font-semibold mt-3'>UK Registration</p>
           <hr className='border-2 border-black w-8 mt-5 rounded-xl' />
 
           <section>
             <div className='flex items-center gap-8'>
               <Image
+                blurDataURL='data:image/jpeg...'
                 src={LegalIllustration}
                 className='mt-10'
                 alt='legal-illustration'
@@ -129,6 +147,7 @@ const LegalStructure = () => {
           <section>
             <div className='flex items-center gap-8'>
               <Image
+                blurDataURL='data:image/jpeg...'
                 src={ContractIllustration}
                 className='mt-10'
                 alt='contract-illustration'
@@ -144,6 +163,7 @@ const LegalStructure = () => {
           <section>
             <div className='flex items-center gap-8'>
               <Image
+                blurDataURL='data:image/jpeg...'
                 src={LocationIllustration}
                 className='mt-10'
                 alt='location-illustration'

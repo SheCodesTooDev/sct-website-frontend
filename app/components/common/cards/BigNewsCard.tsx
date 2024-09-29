@@ -3,10 +3,11 @@ import Link from 'next/link';
 
 const BigNewsCard = ({ image, title, date, slug }: any) => {
   return (
-    <div className='flex flex-col items-start px-0 md:px-10 xl:px-0 justify-center text-start mb-5'>
+    <div className='flex flex-col items-start md:items-center xl:items-start px-0 justify-center text-start mb-5'>
       <div>
         <div className='relative h-80'>
           <Image
+            blurDataURL='data:image/jpeg...'
             className='rounded-xl h-80 object-cover'
             src={image}
             alt='illustration'
