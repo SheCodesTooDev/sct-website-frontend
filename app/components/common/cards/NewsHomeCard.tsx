@@ -15,11 +15,11 @@ const NewsHomeCard = ({ photo, title, date, slug }: any) => {
         />
 
         <div className='flex flex-col justify-start items-start gap-3'>
-          <p className='font-medium text-sm'>{title}</p>
+          <p className='font-medium text-sm lg:text-base'>{title}</p>
           <p className='font-medium text-xs text-secondary'> 📅 {date}</p>
           <Link
             href={`/news/${slug}`}
-            className='text-sctblue text-sm  underline flex justify-end mt-2'
+            className='text-sctblue text-sm lg:text-base  underline flex justify-end mt-2'
           >
             Read more -&gt;
           </Link>
