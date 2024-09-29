@@ -7,6 +7,7 @@ const nextConfig = {
     domains: [process.env.DOMAIN],
   },
   reactStrictMode: false,
+  output: "standalone",
 };
 
 export default nextConfig;
