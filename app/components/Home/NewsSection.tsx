@@ -19,7 +19,7 @@ const News = async () => {
       <p className='font-medium text-lg md:text-sm mb-16  leading-loose text-secondary w-60 sm:w-72 md:w-full'>
         Stay Updated with Expert Insights & Latest Trends in Web Development
       </p>
-      <div className='xl:grid xl:grid-cols-2 items-center gap-20'>
+      <div className='xl:grid xl:grid-cols-2  items-center gap-20'>
         <section className='order-2'>
           <BigNewsCard
             id={articles[0]?.id}
