@@ -26,7 +26,7 @@ export const courses = [
     color: "bg-sctblue",
     title: "Industry Partnerships & Job Placement Support",
     description:
-      "Partnering with leading organizations, SCT assists in job placement post-training, ensuring successful careers in tech for our graduates.",
+      "Partnering with leading organisations, SCT assists in job placement post-training, ensuring successful careers in tech for our graduates.",
   },
   {
     id: 4,
