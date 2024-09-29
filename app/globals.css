@@ -113,6 +113,28 @@ body {
   }
 }
 
+@media (min-width: 1280px) {
+  .green-square-story {
+    display: block;
+    background-image: url('../app/assets/illustrations/green-square.svg');
+    width: 400px;
+    height: 350px;
+    transform: translateY(30px);
+    position: absolute;
+    right: 0;
+  }
+
+  .green-square-team {
+    display: block;
+    background-image: url('../app/assets/illustrations/green-square.svg');
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    top: 20%;
+  }
+}
+
 .bracet {
   background-image: url('../app/assets/illustrations/small-bracet.svg');
   width: 100px;

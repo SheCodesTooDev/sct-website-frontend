@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Linkedin from '@/app/assets/Icon/linkedin-black.svg';
-import Email from '@/app/assets/Icon/email.svg';
 
 const StoryCard = ({ title, slug, photo }: any) => {
   return (
