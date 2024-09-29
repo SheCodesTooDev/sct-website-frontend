@@ -17,6 +17,7 @@ const Navbar = () => {
         <div>
           <div className='flex items-center justify-between py-3 md:py-5 md:block'>
             <Image
+              blurDataURL='data:image/jpeg...'
               className=' w-16 h-8 md:w-20 md:h-auto'
               src={Logo}
               alt="'logo"
@@ -26,7 +27,13 @@ const Navbar = () => {
                 className='block -mt-2 lg:-mt-0'
                 onClick={() => setMobile(!mobile)}
               >
-                <Image src={Menu} alt='menu' />
+                <Image
+                  blurDataURL='data:image/jpeg...'
+                  placeholder='blur'
+                  loading='lazy'
+                  src={Menu}
+                  alt='menu'
+                />
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ const StoryCard = ({ title, slug, photo }: any) => {
       <div className='my-5 flex flex-col items-center'>
         <div className='relative w-[200px] h-[200px] custom-shape '>
           <Image
+            blurDataURL='data:image/jpeg...'
             src={photo}
             alt='student'
             layout='fill'

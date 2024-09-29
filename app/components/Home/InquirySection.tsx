@@ -27,7 +27,13 @@ const InquirySection = () => (
     <div className='end-bracet'></div>
 
     <div className='flex justify-center my-2'>
-      <Image src={Line} alt='line' />
+      <Image
+        blurDataURL='data:image/jpeg...'
+        placeholder='blur'
+        loading='lazy'
+        src={Line}
+        alt='line'
+      />
     </div>
 
     <div className='flex justify-center'>

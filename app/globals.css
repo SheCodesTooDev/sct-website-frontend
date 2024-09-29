@@ -133,6 +133,16 @@ body {
     right: 0;
     top: 20%;
   }
+
+  .green-square-contact {
+    display: block;
+    background-image: url('../app/assets/illustrations/green-square.svg');
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 20%;
+  }
 }
 
 .bracet {

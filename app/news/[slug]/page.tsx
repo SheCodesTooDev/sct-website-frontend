@@ -35,6 +35,7 @@ const SingleNewsPage = async ({ params }: any) => {
             <div className='hidden xl:block col-span-1 h-full'>
               <Link href='https://www.facebook.com/she.codes.too.iq/'>
                 <Image
+                  blurDataURL='data:image/jpeg...'
                   className='  w-8 h-8 md:w-8 md:h-auto m-10'
                   src={FacebookSvg}
                   alt="'logo"
@@ -42,6 +43,7 @@ const SingleNewsPage = async ({ params }: any) => {
               </Link>
               <Link href='https://www.instagram.com/she.codes.too.iq/'>
                 <Image
+                  blurDataURL='data:image/jpeg...'
                   className=' w-8 h-8 md:w-8 md:h-auto m-10'
                   src={InstagramSvg}
                   alt="'logo"
@@ -49,6 +51,7 @@ const SingleNewsPage = async ({ params }: any) => {
               </Link>
               <Link href='https://www.linkedin.com/school/shecodestooiq/'>
                 <Image
+                  blurDataURL='data:image/jpeg...'
                   className=' w-8 h-8 md:w-8 md:h-auto m-10'
                   src={LinkedinSvg}
                   alt="'logo"
@@ -57,6 +60,7 @@ const SingleNewsPage = async ({ params }: any) => {
             </div>
             <div className='lg:col-span-10 relative w-full h-96 '>
               <Image
+                blurDataURL='data:image/jpeg...'
                 className='rounded-xl w-full h-full'
                 src={article.photo}
                 layout='fill'

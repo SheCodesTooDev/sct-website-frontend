@@ -6,6 +6,7 @@ const NewsHomeCard = ({ photo, title, date, slug }: any) => {
     <div className='mt-10 flex flex-col items-start md:items-center xl:items-start px-0 justify-center text-start mb-5 w-full'>
       <div className='flex w-full gap-x-5 '>
         <Image
+          blurDataURL='data:image/jpeg...'
           src={photo}
           width='0'
           height='0'

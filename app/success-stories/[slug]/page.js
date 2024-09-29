@@ -56,6 +56,7 @@ const Story = async ({ params }) => {
                   </clipPath>
                 </defs>
                 <image
+                  blurDataURL='data:image/jpeg...'
                   href={story.photo}
                   x='0'
                   y='0'

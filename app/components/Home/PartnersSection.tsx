@@ -24,6 +24,7 @@ const Partners = () => (
           viewport={{ once: true }} // Ensures the animation runs only once when the element comes into view
         >
           <Image
+            blurDataURL='data:image/jpeg...'
             className='w-16 sm:w-20 sm:h-20 md:w-24 mx-0 md:mx-4 md:h-24 lg:w-36 lg:h-36 object-contain'
             src={ptr.image}
             alt='partner'

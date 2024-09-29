@@ -9,6 +9,7 @@ const AboutCard = ({ title, description, icon }: any) => {
 '
         >
           <Image
+            blurDataURL='data:image/jpeg...'
             className='w-16 h-16 object-contain mb-4 border border-t-2 border-r-2 border-l-2 rounded-md shadow-xl p-2 bg-white'
             src={icon}
             alt='partner'

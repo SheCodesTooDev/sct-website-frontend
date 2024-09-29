@@ -51,6 +51,7 @@ const HomeStoryCard: React.FC<storyProps> = async ({ slug }) => {
         <div className='relative w-64 h-64 md:w-58 md:h-58 xl:w-80 xl:h-80 mt-10 mx-auto '>
           <div className='transparent-image'></div>
           <Image
+            blurDataURL='data:image/jpeg...'
             className='success-img object-contain '
             src={story.photo}
             layout='fill'
@@ -96,6 +97,7 @@ const HomeStoryCard: React.FC<storyProps> = async ({ slug }) => {
             const { width, height } = sizes[index]; // Get size for this image
             return (
               <Image
+                blurDataURL='data:image/jpeg...'
                 key={index}
                 src={stories[index]?.photo || Student}
                 className={`${position.className} rounded-full`}
@@ -111,6 +113,7 @@ const HomeStoryCard: React.FC<storyProps> = async ({ slug }) => {
             );
           })}
           <Image
+            blurDataURL='data:image/jpeg...'
             src={stories[8]?.photo || Student}
             className='absolute rounded-full'
             alt='center-image'

@@ -7,6 +7,7 @@ const BigNewsCard = ({ image, title, date, slug }: any) => {
       <div>
         <div className='relative h-80'>
           <Image
+            blurDataURL='data:image/jpeg...'
             className='rounded-xl h-80 object-cover'
             src={image}
             alt='illustration'
