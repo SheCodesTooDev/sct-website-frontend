@@ -1,12 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 
 const API_URL = process.env.API_URL;
 
 export const getSCTStories = async () => {
-  console.log(API_URL);
   try {
-    const response = await axios.get(`${API_URL}/api/stories?populate=*`);
-    return response.data.data.map((story) => ({
+    const response = await fetch(`${API_URL}/api/stories?populate=*`, {
+      cache: "no-store",
+    });
+    const data = await response.json();
+    return data.data.map((story) => ({
       id: story.id,
       ...story.attributes,
       photo: story.attributes.photo
@@ -14,7 +16,7 @@ export const getSCTStories = async () => {
         : null,
     }));
   } catch (error) {
-    console.error('Error fetching stories:', error);
+    console.error("Error fetching stories:", error);
     return [];
   }
 };
@@ -37,7 +39,7 @@ export const getSCTStory = async (slug) => {
       return null;
     }
   } catch (error) {
-    console.error('Error fetching story:', error);
+    console.error("Error fetching story:", error);
     return null;
   }
 };
@@ -53,7 +55,7 @@ export const getArticles = async () => {
         : null,
     }));
   } catch (error) {
-    console.error('Error fetching articles:', error);
+    console.error("Error fetching articles:", error);
     return [];
   }
 };
@@ -76,7 +78,7 @@ export const getArticle = async (slug) => {
       return null;
     }
   } catch (error) {
-    console.error('Error fetching article:', error);
+    console.error("Error fetching article:", error);
     return null;
   }
 };
@@ -89,7 +91,7 @@ export const getSCTCourses = async () => {
       ...course.attributes,
     }));
   } catch (error) {
-    console.error('Error fetching courses:', error);
+    console.error("Error fetching courses:", error);
     return [];
   }
 };
@@ -109,7 +111,7 @@ export const getSCTCourse = async (slug) => {
       return null;
     }
   } catch (error) {
-    console.error('Error fetching course:', error);
+    console.error("Error fetching course:", error);
     return null;
   }
 };
@@ -122,7 +124,7 @@ export const getSCTQuestions = async () => {
       ...faq.attributes,
     }));
   } catch (error) {
-    console.error('Error fetching faqs:', error);
+    console.error("Error fetching faqs:", error);
     return [];
   }
 };
@@ -142,7 +144,7 @@ export const getSCTQuestion = async (slug) => {
       return null;
     }
   } catch (error) {
-    console.error('Error fetching faq:', error);
+    console.error("Error fetching faq:", error);
     return null;
   }
 };
