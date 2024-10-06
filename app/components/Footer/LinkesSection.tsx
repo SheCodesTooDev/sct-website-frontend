@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Footer.module.css";
 import Link from "next/link";
 
-export default function FooterSec2() {
+export default function LinkesSection() {
   return (
     <div
       className="bg-trueGray-100 pb-10

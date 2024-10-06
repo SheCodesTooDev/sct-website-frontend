@@ -5,7 +5,6 @@ export default function TeamHero({ title }: any) {
   return (
     <div className="flex justify-center flex-col items-center">
       <motion.div
-        className="green-square-team"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
