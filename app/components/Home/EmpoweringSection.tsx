@@ -272,7 +272,7 @@ const EmpoweringSection = () => {
               Educational Approach
             </h1>
             <p className="text-center mt-10 font-thin">
-              With a diverse range of courses covering various programming
+              with a diverse range of courses covering various programming
               topics, women are empowered to explore their areas of interest and
               passion.
             </p>

@@ -1,14 +1,14 @@
-'use client';
-import YellowLine from '../common/YellowLine';
-import { motion } from 'framer-motion';
+"use client";
+import YellowLine from "../common/YellowLine";
+import { motion } from "framer-motion";
 export default function StoriesHero() {
   return (
-    <div className='flex justify-center flex-col items-center'>
+    <div className="flex justify-center flex-col items-center">
       <motion.p
-        className='font-bold text-center text-4xl leading-loose text-sctblue'
+        className="font-bold text-center text-4xl leading-loose text-sctblue"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
         Our Success Stories
@@ -17,23 +17,24 @@ export default function StoriesHero() {
       <motion.div
         initial={{ opacity: 0, scaleX: 0 }}
         whileInView={{ opacity: 1, scaleX: 1 }}
-        transition={{ duration: 0.8, ease: 'easeInOut' }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
         <YellowLine />
       </motion.div>
 
       <motion.div
-        className=' font-extralight text-center text-lg md:text-xl mb-16 leading-loose text-black'
+        className=" font-extralight text-center text-lg md:text-xl mb-16 leading-loose text-black"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2, ease: 'easeInOut' }}
+        transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
         viewport={{ once: true }}
       >
-        Transforming Ambition into Expertise: Success Stories from <br />
-        <p className='font-semibold leading-loose mt-2'>
-          She Codes Too Front-End Developers.
-        </p>
+        Over the years, She Codes Too bootcamps graduates have successfully
+        transitioned into careers as web developers or related fields, often
+        securing roles within just a few months of graduating. With over 90% of
+        our alumni placed in tech jobs, their journeys are a testament to the
+        power of dedication and skill development. Read their stories here.
       </motion.div>
     </div>
   );

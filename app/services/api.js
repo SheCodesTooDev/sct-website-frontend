@@ -5,7 +5,7 @@ const API_URL = process.env.API_URL;
 export const getSCTStories = async () => {
   try {
     const response = await fetch(`${API_URL}/api/stories?populate=*`, {
-      cache: "no-store",
+      next: { revalidate: 60 },
     });
     const data = await response.json();
     return data.data.map((story) => ({
