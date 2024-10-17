@@ -46,8 +46,11 @@ export const getSCTStory = async (slug) => {
 
 export const getArticles = async () => {
   try {
-    const response = await axios.get(`${API_URL}/api/articles?populate=*`);
-    return response.data.data.map((article) => ({
+    const response = await fetch(`${API_URL}/api/articles?populate=*`, {
+      next: { revalidate: 60 },
+    });
+    const data = await response.json();
+    return data.data.map((article) => ({
       id: article.id,
       ...article.attributes,
       photo: article.attributes.photo
@@ -85,13 +88,16 @@ export const getArticle = async (slug) => {
 
 export const getSCTCourses = async () => {
   try {
-    const response = await axios.get(`${API_URL}/api/courses?populate=*`);
-    return response.data.data.map((course) => ({
+    const response = await fetch(`${API_URL}/api/courses?populate=*`, {
+      next: { revalidate: 60 },
+    });
+    const data = await response.json();
+    return data.data.map((course) => ({
       id: course.id,
       ...course.attributes,
     }));
   } catch (error) {
-    console.error("Error fetching courses:", error);
+    console.error("Error fetching stories:", error);
     return [];
   }
 };
@@ -118,8 +124,11 @@ export const getSCTCourse = async (slug) => {
 
 export const getSCTQuestions = async () => {
   try {
-    const response = await axios.get(`${API_URL}/api/faqs?populate=*`);
-    return response.data.data.map((faq) => ({
+    const response = await fetch(`${API_URL}/api/faqs?populate=*`, {
+      next: { revalidate: 60 },
+    });
+    const data = await response.json();
+    return data.data.map((faq) => ({
       id: faq.id,
       ...faq.attributes,
     }));
