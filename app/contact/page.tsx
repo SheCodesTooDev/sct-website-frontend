@@ -6,7 +6,7 @@ import Button from '../components/common/Button';
 
 const Contact = () => {
   return (
-    <div className='sct-bg flex flex-col w-full justify-center items-center py-20 px-8 xl:px-32 text-start mb-10'>
+    <div className='sct-bg flex flex-col w-full justify-center items-center py-20 px-8 xl:px-32 text-start pb-10'>
       <div className='flex justify-center flex-col items-center'>
         <motion.p
           className='font-bold text-4xl leading-loose text-sctblue'
@@ -173,7 +173,7 @@ const Contact = () => {
           </motion.div>
         </div>
       </div>
-      <div className='flex flex-col items-center justify-center py-8'>
+      <div className='flex flex-col items-center justify-center pt-8'>
         <a href='mailto:info@shecodestooiq.com'>
           <div className='text-center mb-4 font-sans text-lg text-gray-800'>
             For any questions, please reach out to us at:
