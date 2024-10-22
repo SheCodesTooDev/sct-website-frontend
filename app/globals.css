@@ -46,6 +46,23 @@ body {
   transform: translate(-50px, 120px) !important;
   background-repeat: no-repeat;
 }
+
+.team-back-image {
+  background-image: url('../app/assets/illustrations/team-vector.svg');
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: top;
+}
+.team-back-image-blue {
+  background-image: url('../app/assets/illustrations/team-vector-blue.svg');
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-y: bottom;
+}
 .stroy-yellow-shape {
   background-image: url('../app/assets/illustrations/story-yellow-shape.svg');
   position: relative;
