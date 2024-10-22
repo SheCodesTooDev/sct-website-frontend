@@ -31,7 +31,7 @@ const TeamCard = ({ name, position, image, index }: any) => {
             {name}
           </p>
           <div className='font-medium text-lg lg:text-xl mt-2 my-3'>
-            <p className='text-start font-medium text-sm text-nowrap sm:text-md md:text-base w-full leading-loose text-secondary'>
+            <p className='text-start font-medium text-sm line-clamp-1 sm:text-md md:text-base w-full leading-loose text-secondary'>
               {position}
             </p>
           </div>
