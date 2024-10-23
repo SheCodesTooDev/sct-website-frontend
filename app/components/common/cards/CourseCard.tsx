@@ -48,11 +48,11 @@ const CourseCard = ({ title, description, icon, isCourseOpen }: any) => {
           </div>
           <Link className='mt-4' href={isCourseOpen ? 'news' : '#'} passHref>
             <Button
-              extrStyles='text-base text-black'
+              extrStyles='text-xs sm:text-base text-black'
               color={
                 isCourseOpen
                   ? 'bg-sctyellow'
-                  : 'bg-gray-400 cursor-not-allowed text-white text-sm'
+                  : 'bg-gray-400 cursor-not-allowed text-white'
               }
             >
               {isCourseOpen ? 'Join ->' : 'Applications are closed'}

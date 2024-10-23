@@ -21,7 +21,7 @@ const NewsList = ({ articles }: any) => {
   }, []);
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 sm:gap-x-5 gap-y-12 z-10'>
-      {articles.map((item: any, index: number) => {
+      {articles.reverse().map((item: any, index: number) => {
         const rowIndex = Math.floor(index / 3);
         const positionInRow = index % 3;
 
