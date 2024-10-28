@@ -29,7 +29,9 @@ const Course = async ({ params }: any) => {
         </div>
         <div className="flex flex-col gap-4">
           <Button color="bg-sctblue">
-            <a href="#">Read More Details Here</a>
+            <a href="https://drive.google.com/file/d/1KXuVgiwV2uqrBHhbBLLxwGEzML6x8PYF/view?usp=sharing">
+              Read More Details Here
+            </a>
           </Button>
           <Button color="bg-sctyellow">
             <a href="https://forms.gle/FqRMDq6zkLUPWWfs8">Apply Now</a>
