@@ -2,13 +2,13 @@ import React from 'react';
 import SCTSection from './SCTSection';
 import LinkesSection from './LinkesSection';
 
-const Footer = () => {
+const NewFooter = () => {
   return (
-    <footer className='md:bg-trueGray-100 xl:flex xl:justify-between'>
+    <footer className='md:bg-trueGray-100 lg:flex lg:justify-between'>
       <SCTSection />
       <LinkesSection />
     </footer>
   );
 };
 
-export default Footer;
+export default NewFooter;
