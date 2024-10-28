@@ -12,17 +12,17 @@ function NewNav() {
     setIsDrawerOpen(!isDrawerOpen);
   };
   return (
-    <>
-      <div className='hidden relative py-6 sm:flex flex-col justify-center'>
+    <div>
+      <div className='hidden py-6  md:flex z-auto flex-col justify-center md:mx-5 lg:mx-10'>
         <LogoLink />
         <DesktopNavLinks />
       </div>
-      <div className='sm:hidden relative flex flex-row my-4'>
+      <div className='md:hidden  relative flex items-center h-full flex-row my-4 z-50'>
         <LogoLink />
         <MobileMenuButton onClick={handleDrawerToggle} />
         <MobileDrawer isOpen={isDrawerOpen} onClose={handleDrawerToggle} />
       </div>
-    </>
+    </div>
   );
 }
 

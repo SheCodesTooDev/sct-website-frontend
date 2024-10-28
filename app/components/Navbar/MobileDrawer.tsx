@@ -1,40 +1,26 @@
 import Link from 'next/link';
+import { navLinks } from '@/app/data/navLinks';
 function MobileDrawer({ isOpen, onClose }: any) {
   return (
     <div
-      className={`fixed flex flex-col justify-center items-center z-10 top-0 right-0 h-full w-full bg-white text-black transition-transform duration-300 transform ${
+      className={`bg-white fixed flex flex-col justify-center text-sctblue items-center z-10 top-0 right-0 h-full w-full  transition-transform duration-300 transform ${
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      <button className='absolute right-7 top-4 p-3' onClick={onClose}>
-        ddsd{' '}
+      <button className='text-2xl absolute right-7 top-4 p-3' onClick={onClose}>
+        X
       </button>
       <ul className='flex flex-col justify-center items-center space-y-4'>
-        <li className='text-3xl hover:text-blue-900 hover:font-semibold'>
-          <Link href='/'>Home</Link>
-        </li>
-        <li className='text-3xl hover:text-blue-900 hover:font-semibold'>
-          <Link href='/'>About</Link>
-        </li>{' '}
-        <li className='text-3xl hover:text-blue-900 hover:font-semibold'>
-          <Link href='/'>Team</Link>
-        </li>{' '}
-        <li className='text-3xl hover:text-blue-900 hover:font-semibold'>
-          <Link href='/'>Courses</Link>
-        </li>{' '}
-        <li className='text-3xl hover:text-blue-900 hover:font-semibold'>
-          <Link href='/'>News</Link>
-        </li>{' '}
-        <li className='text-3xl hover:text-blue-900 hover:font-semibold'>
-          <Link href='/'>Stories</Link>
-        </li>
-        <li className='text-3xl hover:text-blue-900 hover:font-semibold'>
-          <Link href='/'>FAQ</Link>
-        </li>{' '}
-        <li className='text-3xl hover:text-blue-900 hover:font-semibold'>
-          <Link href='/'>Contact</Link>
-        </li>
-        {/* Add other navigation links */}
+        {navLinks.map((link, i) => (
+          <li
+            key={i}
+            className='text-3xl hover:text-blue-900 hover:font-semibold'
+          >
+            <Link onClick={onClose} href={link.href}>
+              {link.text}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
