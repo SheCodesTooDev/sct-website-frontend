@@ -14,7 +14,7 @@ function MobileDrawer({ isOpen, onClose }: any) {
         {navLinks.map((link, i) => (
           <li
             key={i}
-            className='text-3xl hover:text-blue-900 hover:font-semibold'
+            className='text-3xl hover:text-sctyellow hover:font-semibold'
           >
             <Link onClick={onClose} href={link.href}>
               {link.text}
