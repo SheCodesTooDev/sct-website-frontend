@@ -26,6 +26,14 @@ body {
   border-radius: 500px 0px 500px 500px;
 }
 
+summary {
+  list-style-type: none; /* Firefox */
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Chrome */
+}
+
 .custom-shape {
   clip-path: url(#custom-shape);
   overflow: hidden;
