@@ -33,7 +33,7 @@ const AboutHero = () => {
       </motion.div>
 
       <motion.p
-        className='font-medium text-start text-base md:text-md mb-16 leading-loose text-black'
+        className='font-normal text-start text-base md:text-md mb-16 leading-loose text-black'
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.2, ease: 'easeInOut' }}
