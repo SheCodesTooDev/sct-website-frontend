@@ -79,6 +79,7 @@ summary::-webkit-details-marker {
   height: 400px;
   transform: translate(-50px, 60px) !important;
   background-repeat: no-repeat;
+  pointer-events: none; /* Ensure it doesn't block clicks */
 }
 .split-background {
   display: flex;
@@ -115,6 +116,12 @@ summary::-webkit-details-marker {
 
 .green-square {
   display: none;
+}
+
+.stories-button {
+  pointer-events: all;
+  background-color: red;
+  z-index: 100000;
 }
 
 @media (min-width: 1024px) {
