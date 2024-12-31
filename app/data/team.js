@@ -38,7 +38,7 @@ export const team = [
   {
     id: 4,
     name: "Yasir Al-Samarai",
-    position: "Finance Manger",
+    position: "Finance Manager",
     image: Yasir,
   },
   {
