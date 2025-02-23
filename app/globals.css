@@ -3,7 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Degular', sans-serif;
+  font-family: "Degular", sans-serif;
   overflow-x: hidden !important;
 }
 @tailwind base;
@@ -48,7 +48,7 @@ summary::-webkit-details-marker {
 }
 
 .transparent-image {
-  background-image: url('../app/assets/illustrations/transparent-shape.svg');
+  background-image: url("../app/assets/illustrations/transparent-shape.svg");
   position: relative;
   width: 400px;
   height: 400px;
@@ -57,7 +57,7 @@ summary::-webkit-details-marker {
 }
 
 .team-back-image {
-  background-image: url('../app/assets/illustrations/team-vector.svg');
+  background-image: url("../app/assets/illustrations/team-vector.svg");
   width: 200px;
   height: 200px;
   background-repeat: no-repeat;
@@ -65,7 +65,7 @@ summary::-webkit-details-marker {
   background-position-y: top;
 }
 .team-back-image-blue {
-  background-image: url('../app/assets/illustrations/team-vector-blue.svg');
+  background-image: url("../app/assets/illustrations/team-vector-blue.svg");
   width: 200px;
   height: 200px;
   background-repeat: no-repeat;
@@ -73,7 +73,7 @@ summary::-webkit-details-marker {
   background-position-y: bottom;
 }
 .stroy-yellow-shape {
-  background-image: url('../app/assets/illustrations/story-yellow-shape.svg');
+  background-image: url("../app/assets/illustrations/story-yellow-shape.svg");
   position: relative;
   width: 400px;
   height: 400px;
@@ -92,7 +92,7 @@ summary::-webkit-details-marker {
   position: relative;
 }
 .split-background::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -102,15 +102,56 @@ summary::-webkit-details-marker {
   border-bottom-left-radius: 50px;
   z-index: 0;
 }
+.donation-background {
+  background-image: url("../app/assets/illustrations/donation-bg.svg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.donation-background p {
+  font-weight: bold;
+}
+
+.donation-background .donation-text {
+  font-weight: bold;
+  text-align: center;
+  max-width: 60%;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.donation-background .donation-shape {
+  display: block;
+  background-image: url("../app/assets/illustrations/donation-shape.png");
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.donation-background .w-60 {
+  max-width: 240px;
+}
+
+.donation-background .sm\:w-72 {
+  max-width: 288px;
+}
+
+.donation-background .md\:w-full {
+  max-width: 100%;
+}
+
 .content {
   z-index: 1;
   position: relative;
 }
 .sct-bg {
-  background-image: url('../app/assets/illustrations/sct-bg.svg');
+  background-image: url("../app/assets/illustrations/sct-bg.svg");
 }
 .yellow-vector-bg {
-  background-image: url('../app/assets/illustrations/yellow-vector.svg');
+  background-image: url("../app/assets/illustrations/yellow-vector.svg");
   background-repeat: no-repeat;
 }
 
@@ -127,7 +168,7 @@ summary::-webkit-details-marker {
 @media (min-width: 1024px) {
   .green-square {
     display: block;
-    background-image: url('../app/assets/illustrations/green-square.svg');
+    background-image: url("../app/assets/illustrations/green-square.svg");
     width: 400px;
     height: 350px;
     transform: translateY(30px);
@@ -137,7 +178,7 @@ summary::-webkit-details-marker {
 
   .green-square-team {
     display: block;
-    background-image: url('../app/assets/illustrations/green-square.svg');
+    background-image: url("../app/assets/illustrations/green-square.svg");
     width: 400px;
     height: 500px;
     position: absolute;
@@ -149,7 +190,7 @@ summary::-webkit-details-marker {
 @media (min-width: 1280px) {
   .green-square-story {
     display: block;
-    background-image: url('../app/assets/illustrations/green-square.svg');
+    background-image: url("../app/assets/illustrations/green-square.svg");
     width: 400px;
     height: 350px;
     transform: translateY(30px);
@@ -159,7 +200,7 @@ summary::-webkit-details-marker {
 
   .green-square-team {
     display: block;
-    background-image: url('../app/assets/illustrations/green-square.svg');
+    background-image: url("../app/assets/illustrations/green-square.svg");
     width: 400px;
     height: 500px;
     position: absolute;
@@ -169,7 +210,7 @@ summary::-webkit-details-marker {
 
   .green-square-contact {
     display: block;
-    background-image: url('../app/assets/illustrations/green-square.svg');
+    background-image: url("../app/assets/illustrations/green-square.svg");
     width: 300px;
     height: 400px;
     position: absolute;
@@ -179,7 +220,7 @@ summary::-webkit-details-marker {
 }
 
 .bracet {
-  background-image: url('../app/assets/illustrations/small-bracet.svg');
+  background-image: url("../app/assets/illustrations/small-bracet.svg");
   width: 100px;
   height: 100px;
   position: absolute;
@@ -199,7 +240,7 @@ summary::-webkit-details-marker {
 }
 
 .end-bracet {
-  background-image: url('../app/assets/illustrations/small-end-bracet.svg');
+  background-image: url("../app/assets/illustrations/small-end-bracet.svg");
   width: 90px;
   height: 90px;
   position: absolute;
@@ -210,7 +251,7 @@ summary::-webkit-details-marker {
 
 @media (min-width: 768px) {
   .bracet {
-    background-image: url('../app/assets/illustrations/bracet.svg');
+    background-image: url("../app/assets/illustrations/bracet.svg");
     width: 200px;
     height: 200px;
     position: absolute;
@@ -220,7 +261,7 @@ summary::-webkit-details-marker {
   }
 
   .end-bracet {
-    background-image: url('../app/assets/illustrations/end-bracet.svg');
+    background-image: url("../app/assets/illustrations/end-bracet.svg");
     width: 200px;
     height: 200px;
     position: absolute;
@@ -232,7 +273,7 @@ summary::-webkit-details-marker {
 
 @media (max-width: 1280px) {
   .transparent-image {
-    background-image: url('../app/assets/illustrations/transparent-shape.svg');
+    background-image: url("../app/assets/illustrations/transparent-shape.svg");
     position: relative;
     width: 200px;
     height: 200px;
