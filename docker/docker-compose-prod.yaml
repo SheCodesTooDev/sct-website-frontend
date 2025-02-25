@@ -1,0 +1,9 @@
+services:
+  sct-website:
+    container_name: sct-website
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile.prod
+    restart: always
+    ports:
+      - 3000:3000
