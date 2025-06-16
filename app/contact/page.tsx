@@ -111,7 +111,7 @@ const Contact = () => {
               </svg>
 
               <p className=" text-start text-xl text-sctblue  mt-3">
-                Women of Tomorrow for Educational Development
+                Women of Tomorrow Foundation for Education Development
               </p>
               <p className=" text-start  mt-3">Baghdad, Iraq.</p>
             </div>
