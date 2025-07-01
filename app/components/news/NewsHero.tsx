@@ -1,6 +1,6 @@
-'use client';
-import { motion } from 'framer-motion';
-import YellowLine from '../common/YellowLine';
+"use client";
+import { motion } from "framer-motion";
+import YellowLine from "../common/YellowLine";
 
 const NewsHero = () => {
   const containerVariants = {
@@ -18,34 +18,33 @@ const NewsHero = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: 'easeOut' },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
   return (
     <motion.div
-      initial='hidden'
-      animate='visible'
+      initial="hidden"
+      animate="visible"
       variants={containerVariants}
-      className='flex flex-col items-center text-center'
+      className="flex flex-col items-center text-center"
     >
       <motion.p
-        className='font-bold text-4xl leading-loose text-sctblue'
+        className="font-bold text-4xl leading-loose text-sctblue"
         variants={itemVariants}
       >
         Latest News
       </motion.p>
 
-      <motion.div className='my-4' variants={itemVariants}>
+      <motion.div className="my-4" variants={itemVariants}>
         <YellowLine />
       </motion.div>
 
       <motion.p
-        className='font-medium text-lg md:text-md mb-16 leading-loose text-secondary w-60 sm:w-72 md:w-full'
+        className="font-medium text-lg md:text-md mb-16 leading-loose text-secondary w-60 sm:w-72 md:w-full"
         variants={itemVariants}
       >
-        Stay up-to-date with the latest developments in the world of technology
-        and coding.
+        Latest News from She Codes Too
       </motion.p>
     </motion.div>
   );
