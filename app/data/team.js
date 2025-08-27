@@ -12,9 +12,10 @@ import Murt from "../assets/sct/murt.webp";
 import MDheya from "../assets/sct/hamdoon.webp";
 import Aida from "../assets/sct/aida.webp";
 import Maha from "../assets/sct/maha.webp";
-import Nada from "../assets/sct/nada.webp";
-import Ashley from "../assets/sct/ashley.webp";
-import Hajar from "../assets/sct/hajar.webp";
+import Nada from "../assets/sct/nada.png";
+import Ashley from "../assets/sct/Ashley.png";
+import Hajar from "../assets/sct/hajar.png";
+import Khoolud from "../assets/sct/khoolud.png";
 
 export const team = [
   {
@@ -124,5 +125,11 @@ export const volunteer = [
     name: "Nada",
     position: "Designer and Social Media",
     image: Nada,
+  },
+  {
+    id: 18,
+    name: "Khoolud",
+    position: "Marketing Support",
+    image: Khoolud,
   },
 ];
