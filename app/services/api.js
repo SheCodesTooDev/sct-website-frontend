@@ -4,11 +4,15 @@ const API_URL = process.env.API_URL;
 
 export const getSCTStories = async () => {
   try {
-    const response = await fetch(`${API_URL}/api/stories?populate=*`, {
-      next: { revalidate: 60 },
-    });
+    const stories_per_page = 50;
+    const response = await fetch(
+      `${API_URL}/api/stories?populate=*&pagination[pageSize]=${stories_per_page}`,
+      {
+        next: { revalidate: 60 },
+      }
+    );
     const data = await response.json();
-    return data.data.map((story) => ({
+    return data.data.reverse().map((story) => ({
       id: story.id,
       ...story.attributes,
       photo: story.attributes.photo
@@ -46,17 +50,23 @@ export const getSCTStory = async (slug) => {
 
 export const getArticles = async () => {
   try {
-    const response = await fetch(`${API_URL}/api/articles?populate=*`, {
-      next: { revalidate: 60 },
-    });
+    const articles_per_page = 50;
+    const response = await fetch(
+      `${API_URL}/api/articles?populate=*&pagination[pageSize]=${articles_per_page}`,
+      {
+        next: { revalidate: 60 },
+      }
+    );
     const data = await response.json();
-    return data.data.map((article) => ({
-      id: article.id,
-      ...article.attributes,
-      photo: article.attributes.photo
-        ? `${API_URL}${article.attributes.photo.data[0].attributes.url}`
-        : null,
-    }));
+    return data.data
+      .map((article) => ({
+        id: article.id,
+        ...article.attributes,
+        photo: article.attributes.photo
+          ? `${API_URL}${article.attributes.photo.data[0].attributes.url}`
+          : null,
+      }))
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
   } catch (error) {
     console.error("Error fetching articles:", error);
     return [];

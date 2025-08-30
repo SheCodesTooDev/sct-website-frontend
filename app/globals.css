@@ -16,6 +16,15 @@ body {
   }
 }
 
+.hover-div {
+  transition: transform 0.2s ease;
+}
+
+.hover-div:hover {
+  transform: scale(1.05); /* Slightly scale up */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
 .svg-container {
   height: 65px; /* Desired reduced height */
   overflow: hidden;
