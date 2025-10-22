@@ -3,6 +3,8 @@ import US from "../assets/logos/us.png";
 import UNDP from "../assets/logos/undp.png";
 import META from "../assets/logos/meta.png";
 import DATACAMP from "../assets/logos/DC_Donates_logo_regular.png";
+import CISCO from "../assets/logos/logoNetAcad-TwoColor.png";
+
 export const partners = [
   {
     id: 1,
@@ -27,5 +29,9 @@ export const partners = [
     id: 5,
 
     image: DATACAMP,
+  },
+  {
+    id: 6,
+    image: CISCO,
   },
 ];
