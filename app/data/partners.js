@@ -4,6 +4,8 @@ import UNDP from "../assets/logos/undp.png";
 import META from "../assets/logos/meta.png";
 import DATACAMP from "../assets/logos/DC_Donates_logo_regular.png";
 import CISCO from "../assets/logos/logoNetAcad-TwoColor.png";
+import COURSERA from "../assets/logos/coursera-logo-full-rgb.png";
+import QICARD from "../assets/logos/qicard-seeklogo.png";
 
 export const partners = [
   {
@@ -33,5 +35,13 @@ export const partners = [
   {
     id: 6,
     image: CISCO,
+  },
+  {
+    id: 7,
+    image: COURSERA,
+  },
+  {
+    id: 8,
+    image: QICARD,
   },
 ];
