@@ -1,52 +1,21 @@
 "use client";
-import { motion } from "framer-motion";
 import YellowLine from "../common/YellowLine";
 
 const NewsHero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      className="flex flex-col items-center text-center"
-    >
-      <motion.p
-        className="font-bold text-4xl leading-loose text-sctblue"
-        variants={itemVariants}
-      >
+    <div className="flex flex-col items-center text-center">
+      <p className="font-bold text-4xl leading-loose text-sctblue">
         Latest News
-      </motion.p>
+      </p>
 
-      <motion.div className="my-4" variants={itemVariants}>
+      <div className="my-4">
         <YellowLine />
-      </motion.div>
+      </div>
 
-      <motion.p
-        className="font-medium text-lg md:text-md mb-16 leading-loose text-secondary w-60 sm:w-72 md:w-full"
-        variants={itemVariants}
-      >
+      <p className="font-medium text-lg md:text-md mb-16 leading-loose text-secondary w-60 sm:w-72 md:w-full">
         Latest News from She Codes Too
-      </motion.p>
-    </motion.div>
+      </p>
+    </div>
   );
 };
 

@@ -1,35 +1,34 @@
 "use client";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { partners } from "@/app/data/partners";
 import YellowLine from "../common/YellowLine";
+
 const Partners = () => (
-  <div className=" flex flex-col w-full justify-center items-center py-20 px-5 text-center">
+  <div className="flex flex-col w-full justify-center items-center py-20 px-5 text-center">
     <p className="font-medium text-3xl leading-loose">
       Our Partners and Donors
     </p>
 
     <YellowLine />
-    <p className=" text-lg md:text-base leading-loose  w-60 sm:w-72 md:w-full">
+
+    <p className="text-lg md:text-base leading-loose w-60 sm:w-72 md:w-full mb-10">
       Thank you to our valued partners and donors for believing in and
       supporting our mission.
     </p>
-    <div className=" mt-10 bg-white border border-t-1 rounded-xl shadow-md flex py-2 items-center px-6  sm:px-6 md:px-16 lg:px-20 justify-center">
+
+    <div className="bg-white border rounded-xl shadow-md flex flex-wrap justify-center items-center gap-6 py-6 px-6 sm:px-8 md:px-16 lg:px-20">
       {partners.map((ptr) => (
-        <motion.div
+        <div
           key={ptr.id}
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
-          viewport={{ once: true }} // Ensures the animation runs only once when the element comes into view
+          className="flex justify-center items-center flex-1 min-w-[80px] max-w-[180px]"
         >
           <Image
             blurDataURL="data:image/jpeg..."
-            className="w-16 sm:w-20 sm:h-20 md:w-24 mx-0 md:mx-4 md:h-24 lg:w-36 lg:h-36 object-contain"
+            className="w-full h-auto object-contain"
             src={ptr.image}
             alt="partner"
           />
-        </motion.div>
+        </div>
       ))}
     </div>
   </div>

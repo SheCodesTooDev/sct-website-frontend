@@ -1,7 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
-import Button from "../common/Button";
-import Line from "../../assets/illustrations/line.svg";
 import Image from "next/image";
 import YellowLine from "../common/YellowLine";
 import { companies } from "@/app/data/compaines";

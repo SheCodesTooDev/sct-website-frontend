@@ -1,6 +1,5 @@
 import Raghad from "../assets/sct/raghad.webp";
 import Ibrahim from "../assets/sct/ibrahim.webp";
-import Aya from "../assets/sct/aya.webp";
 import Patrick from "../assets/sct/patrick.webp";
 import Mohammed from "../assets/sct/mohammed.webp";
 import Athraa from "../assets/sct/athraa.webp";
@@ -30,12 +29,6 @@ export const team = [
     name: "Ibrahim Jamal",
     position: "Program Manager",
     image: Ibrahim,
-  },
-  {
-    id: 3,
-    name: "Aya Mohammed",
-    position: "Program Assistant",
-    image: Aya,
   },
   {
     id: 4,

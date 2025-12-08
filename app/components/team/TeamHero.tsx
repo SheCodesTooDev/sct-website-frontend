@@ -1,34 +1,17 @@
 "use client";
+
 import YellowLine from "../common/YellowLine";
-import { motion } from "framer-motion";
+
 export default function TeamHero({ title }: any) {
   return (
     <div className="flex justify-center flex-col items-center">
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        viewport={{ once: true }}
-      ></motion.div>
-
-      <motion.p
-        className="font-bold text-center text-4xl leading-loose text-sctblue"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        viewport={{ once: true }}
-      >
+      <p className="font-bold text-center text-4xl leading-loose text-sctblue">
         {title}
-      </motion.p>
+      </p>
 
-      <motion.div
-        initial={{ opacity: 0, scaleX: 0 }}
-        whileInView={{ opacity: 1, scaleX: 1 }}
-        transition={{ duration: 0.8, ease: "easeInOut" }}
-        viewport={{ once: true }}
-      >
+      <div>
         <YellowLine />
-      </motion.div>
+      </div>
     </div>
   );
 }
