@@ -15,7 +15,7 @@ import Nada from "../assets/sct/nada.png";
 import Ashley from "../assets/sct/Ashley.png";
 import Hajar from "../assets/sct/hajar.png";
 import Khoolud from "../assets/sct/khoolud.png";
-import Samara from "../assets/sct/samara.png";
+import Ayalaheb from "../assets/sct/ayalaheb.png";
 
 export const team = [
   {
@@ -109,12 +109,6 @@ export const volunteer = [
     image: Mohammed,
   },
   {
-    id: 16,
-    name: "Athraa Mohammed",
-    position: "Designer",
-    image: Athraa,
-  },
-  {
     id: 17,
     name: "Nada",
     position: "Designer and Social Media",
@@ -127,9 +121,9 @@ export const volunteer = [
     image: Khoolud,
   },
   {
-    id: 19,
-    name: "Samara",
-    position: "Marketing Support",
-    image: Samara,
+    id: 20,
+    name: "Aya Laheb",
+    position: "Program coordinator",
+    image: Ayalaheb,
   },
 ];
