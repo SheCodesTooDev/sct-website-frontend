@@ -26,45 +26,45 @@ export const team = [
   },
   {
     id: 2,
-    name: "Ibrahim Jamal",
-    position: "Program Manager",
-    image: Ibrahim,
-  },
-  {
-    id: 4,
-    name: "Yasir Al-Samarai",
-    position: "Finance Lead",
-    image: Yasir,
-  },
-  {
-    id: 5,
     name: "Ashley Curren",
     position: "Fundraising Lead",
     image: Ashley,
+  },
+  {
+    id: 14,
+    name: "Hajar Shaker",
+    position: "Program Lead",
+    image: Hajar,
   },
 ];
 
 export const trustee = [
   {
-    id: 6,
+    id: 3,
     name: "Patrick Atkinson",
     position: "Trustee Chair",
     image: Patrick,
   },
   {
-    id: 7,
+    id: 4,
     name: "Hawra Milani ",
     position: "Trustee",
     image: Hawra,
   },
   {
-    id: 8,
+    id: 5,
+    name: "Ibrahim Jamal",
+    position: "Trustee",
+    image: Ibrahim,
+  },
+  {
+    id: 6,
     name: "Murtadha Al-Tamimi",
     position: "Trustee",
     image: Murt,
   },
   {
-    id: 9,
+    id: 7,
     name: "Dr. Aida Al-Obaidi",
     position: "Trustee",
     image: Aida,
@@ -96,12 +96,7 @@ export const volunteer = [
     position: "Partnership Advisor",
     image: AthraF,
   },
-  {
-    id: 14,
-    name: "Hajar Shaker",
-    position: "Program Lead",
-    image: Hajar,
-  },
+
   {
     id: 15,
     name: "Mohammed Ali",
