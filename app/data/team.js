@@ -42,31 +42,31 @@ export const trustee = [
   {
     id: 3,
     name: "Patrick Atkinson",
-    position: "Trustee Chair",
+    position: "Trustee Chair, UK",
     image: Patrick,
   },
   {
     id: 4,
     name: "Hawra Milani ",
-    position: "Trustee",
+    position: "Trustee, UK",
     image: Hawra,
   },
   {
     id: 5,
     name: "Ibrahim Jamal",
-    position: "Trustee",
+    position: "Trustee, UK",
     image: Ibrahim,
   },
   {
     id: 6,
     name: "Murtadha Al-Tamimi",
-    position: "Trustee",
+    position: "Board Member, Iraq",
     image: Murt,
   },
   {
     id: 7,
     name: "Dr. Aida Al-Obaidi",
-    position: "Trustee",
+    position: "Board Member, Iraq",
     image: Aida,
   },
 ];
